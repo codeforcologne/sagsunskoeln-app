@@ -1,20 +1,34 @@
 import {Page} from 'ionic-angular';
-// import {ImagePicker} from 'ionic-native';
+import {ImagePicker} from 'ionic-native';
 // import {Camera} from 'ionic-native';
 
+
+
+class Meldung {
+    images: String[];
+    constructor() {
+
+    }
+
+    addImage(url: string) {
+        images.push(url);
+        console.log("Image:" + url);
+    }
+}
 
 @Page({
     templateUrl: 'build/pages/NeueMeldung/NeueMeldung.html'
 })
 export class NeueMeldungPage {
+    meldung: Meldung;
+
     constructor() {
-
+        this.meldung = new Meldung();
     }
-    pickImage() {
 
+    pickImage() {
         console.log("pick an image");
-        
-        /*
+
         let options = {
             maximumImagesCount: 10,
             width: 800,
@@ -23,11 +37,10 @@ export class NeueMeldungPage {
         };
         ImagePicker.getPictures(options).then((results) => {
             for (var i = 0; i < results.length; i++) {
-                console.log('Image URI: ' + results[i]);
+                this.meldung.addImage(results[i]);
             }
         }, (err) => {
         });
-        */
     }
 
     takeImage() {
@@ -49,4 +62,8 @@ export class NeueMeldungPage {
             */
     }
 
+
+
 }
+
+

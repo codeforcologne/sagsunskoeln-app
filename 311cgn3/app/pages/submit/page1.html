@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+    <ion-title>Neue Meldung</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+    <h2>Neue Meldung aufgeben!</h2>
+    <p>
+        Deine aktueller Ort ist: {{location}}
+
+
+
+    </p>
+
+    <ion-card>
+        <img [src]="image">
+    </ion-card>
+    <p>
+
+        <button (click)="doAlert()">Show alert</button>
+
+        <button (click)="getPicture()">Take picture</button>
+    </p>
+</ion-content>

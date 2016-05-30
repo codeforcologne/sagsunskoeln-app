@@ -1,7 +1,16 @@
 Konfig
 
+
+Nach dem Update: 
+npm install
+
+Wenn auf Android emuliert werden soll:
 install android sdk 
     in Ubuntu über umake (benötigt auf 16.04 das OpenJDK 7, über eigene Quelle nachinstallieren)
+
+
+
+
 
 install genymotion
     -> eigene Android SDK konfigurieren 

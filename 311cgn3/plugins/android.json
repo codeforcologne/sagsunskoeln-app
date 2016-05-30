@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "de.codeforcologne.suca"
+        }
+    }
+}
