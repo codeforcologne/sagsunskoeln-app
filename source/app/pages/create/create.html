@@ -1,0 +1,39 @@
+
+<ion-navbar *navbar>
+<button menuToggle>
+	<ion-icon name="menu"></ion-icon>
+</button>
+<ion-title>Neue Meldung einreichen</ion-title> 
+</ion-navbar>
+
+
+
+<ion-content padding>
+
+
+<ion-card>
+	<ion-card-header>
+		<strong>Bild festlegen</strong>
+		<ion-checkbox dark checked="false" style="float:right"></ion-checkbox> 
+	</ion-card-header>
+  <ion-card-content>
+    <button (click)="pickImage()">In Galerie auswählen</button>
+    <button (click)="takeImage()">Bild machen</button>
+  </ion-card-content>
+
+</ion-card>
+
+
+<ion-card disabled>
+	<ion-card-header>
+		<strong>Standort auslesen</strong>
+		<ion-checkbox dark checked="false" disabled style="float:right"></ion-checkbox> 
+	</ion-card-header>
+  <ion-card-content>
+    <!-- Add card content here! -->
+  </ion-card-content>
+
+</ion-card>
+
+
+</ion-content>
