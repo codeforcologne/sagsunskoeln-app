@@ -4,6 +4,7 @@ import {StatusBar} from 'ionic-native';
 import {NeueMeldungPage} from './pages/NeueMeldung/NeueMeldung';
 import {ListPage} from './pages/list/list';
 import {StartPage} from './pages/start/start';
+import {CategoriesPage} from './pages/categories/categories.page';
 
 @App({
     templateUrl: 'build/app.html',
@@ -13,7 +14,7 @@ class MyApp {
     @ViewChild(Nav) nav: Nav;
 
     // make HelloIonicPage the root (or first) page
-    rootPage: any = NeueMeldungPage;
+    rootPage: any = StartPage;
     pages: Array<{ title: string, component: any }>;
 
     constructor(
@@ -25,8 +26,9 @@ class MyApp {
         // set our app's pages
         this.pages = [
             { title: 'Start', component: StartPage },
-            { title: 'Neue Meldung', component: NeueMeldungPage },
-            { title: 'Deine Meldungen', component: ListPage }
+            { title: 'Neues Anliegen', component: NeueMeldungPage },
+            { title: 'Deine Meldungen', component: ListPage },
+            { title: 'Kategorien', component: CategoriesPage }
         ];
     }
 
