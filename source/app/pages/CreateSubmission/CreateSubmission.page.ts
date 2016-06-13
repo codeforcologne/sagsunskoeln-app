@@ -4,26 +4,26 @@ import {ImagePicker} from 'ionic-native';
 
 
 
-class Meldung {
+class Submission {
     images: String[];
     constructor() {
-
+        
     }
 
     addImage(url: string) {
-        images.push(url);
+        this.images.push(url);
         console.log("Image:" + url);
     }
 }
 
 @Page({
-    templateUrl: 'build/pages/NeueMeldung/NeueMeldung.html'
+    templateUrl: 'build/pages/CreateSubmission/CreateSubmission.html'
 })
-export class NeueMeldungPage {
-    meldung: Meldung;
+export class CreateSubmissionPage {
+    meldung: Submission;
 
     constructor() {
-        this.meldung = new Meldung();
+        this.meldung = new Submission();
     }
 
     pickImage() {

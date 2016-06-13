@@ -1,11 +1,11 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
-import {ItemDetailsPage} from '../item-details/item-details';
+// import {SubmissionDetailsPage} from './../SubmissionDetails/SubmissionDetails.page';
 
 
 @Page({
-  templateUrl: 'build/pages/list/list.html'
+  templateUrl: 'build/pages/YourSubmissions/YourSubmissions.html'
 })
-export class ListPage {
+export class YourSubmissionsPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
@@ -28,8 +28,11 @@ export class ListPage {
   }
 
   itemTapped(event, item) {
-    this.nav.push(ItemDetailsPage, {
+    console.log("Hello World")
+    /*
+    this.nav.push(SubmissionDetailsPage, {
       item: item
     });
+    */
   }
 }

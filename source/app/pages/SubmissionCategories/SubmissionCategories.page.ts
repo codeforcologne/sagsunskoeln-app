@@ -3,14 +3,13 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 
 
 @Page({
-    templateUrl: 'build/pages/categories/categories.html'
+    templateUrl: 'build/pages/SubmissionCategories/SubmissionCategories.html'
 })
-export class CategoriesPage {
+export class SubmissionCategoriesPage {
     icons: string[];
     categories: Array<{ title: string, description: string, icon: string }>;
 
     constructor(private nav: NavController, navParams: NavParams) {
-
 
 
         this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',

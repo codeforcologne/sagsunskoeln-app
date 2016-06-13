@@ -1,6 +1,6 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
-import {NeueMeldungPage} from './../NeueMeldung/NeueMeldung';
-import {ListPage} from './../list/list';
+import {CreateSubmissionPage} from './../CreateSubmission/CreateSubmission.page';
+import {YourSubmissionsPage} from './../YourSubmissions/YourSubmissions.page';
 
 @Page({
     templateUrl: 'build/pages/start/start.html'
@@ -11,11 +11,10 @@ export class StartPage {
     }
 
     jumpToList() {
-        console.log("yay"); 
-        this.nav.push(ListPage);
+        this.nav.push(YourSubmissionsPage);
     }
 
     jumpToNew() {
-        this.nav.push(NeueMeldungPage);
+        this.nav.push(CreateSubmissionPage);
     }
 }

@@ -1,10 +1,12 @@
 import {ViewChild} from '@angular/core';
 import {App, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {NeueMeldungPage} from './pages/NeueMeldung/NeueMeldung';
-import {ListPage} from './pages/list/list';
+import {CreateSubmissionPage} from './pages/CreateSubmission/CreateSubmission.page';
+import {YourSubmissionsPage} from './pages/YourSubmissions/YourSubmissions.page';
+import {AllSubmissionsPage} from './pages/AllSubmissions/AllSubmissions.page';
+import {SubmissionCategoriesPage} from './pages/SubmissionCategories/SubmissionCategories.page';
 import {StartPage} from './pages/start/start';
-import {CategoriesPage} from './pages/categories/categories.page';
+
 
 @App({
     templateUrl: 'build/app.html',
@@ -26,9 +28,10 @@ class MyApp {
         // set our app's pages
         this.pages = [
             { title: 'Start', component: StartPage },
-            { title: 'Neues Anliegen', component: NeueMeldungPage },
-            { title: 'Deine Meldungen', component: ListPage },
-            { title: 'Kategorien', component: CategoriesPage }
+            { title: 'Neues Anliegen', component: CreateSubmissionPage },
+            { title: 'Deine Meldungen', component: YourSubmissionsPage },
+          //  { title: 'Alle Meldungen', component: AllSubmissionsPage },
+            { title: 'Kategorien', component: SubmissionCategoriesPage }
         ];
     }
 
