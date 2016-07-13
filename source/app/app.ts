@@ -3,7 +3,7 @@ import {App, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {CreateSubmissionPage} from './pages/CreateSubmission/CreateSubmission.page';
 import {YourSubmissionsPage} from './pages/YourSubmissions/YourSubmissions.page';
-import {AllSubmissionsPage} from './pages/AllSubmissions/AllSubmissions.page';
+import {AllSubmissionsPage} from "./pages/all-submissions/all-submissions.page";
 import {SubmissionCategoriesPage} from './pages/SubmissionCategories/SubmissionCategories.page';
 import {StartPage} from './pages/start/start';
 
@@ -30,7 +30,7 @@ class MyApp {
             { title: 'Start', component: StartPage },
             { title: 'Neues Anliegen', component: CreateSubmissionPage },
             { title: 'Deine Meldungen', component: YourSubmissionsPage },
-          //  { title: 'Alle Meldungen', component: AllSubmissionsPage },
+            { title: 'Alle Meldungen', component: AllSubmissionsPage },
             { title: 'Kategorien', component: SubmissionCategoriesPage }
         ];
     }

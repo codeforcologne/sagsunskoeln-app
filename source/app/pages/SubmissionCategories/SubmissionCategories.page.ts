@@ -1,24 +1,31 @@
 
 import {Page, NavController, NavParams} from 'ionic-angular';
 
+import {CategoriesProvider} from './../../providers/categories-provider/categories-provider'; 
+
 
 @Page({
-    templateUrl: 'build/pages/SubmissionCategories/SubmissionCategories.html'
+    templateUrl: 'build/pages/SubmissionCategories/SubmissionCategories.html', 
+    providers: [CategoriesProvider] 
 })
 export class SubmissionCategoriesPage {
     icons: string[];
-    categories: Array<{ title: string, description: string, icon: string }>;
+    public categories: any; 
 
-    constructor(private nav: NavController, navParams: NavParams) {
-
-
-        this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-            'american-football', 'boat', 'bluetooth', 'build'];
-
-        this.categories = [];
-        this.initIcons(); 
+    constructor(private nav: NavController, navParams: NavParams, public categoriesProvider : CategoriesProvider) {
+        this.loadCategories(); 
     }
 
+
+    loadCategories() {
+        this.categoriesProvider.load()
+            .then(data => {
+                this.categories = data
+            }
+            
+        ); 
+       // this.initIcons(); 
+    }
 
     initIcons() {
         this.categories.push({

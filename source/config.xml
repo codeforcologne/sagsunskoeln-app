@@ -11,6 +11,7 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
+  <access origin="https://sags-uns.stadt-koeln.de" />
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>

@@ -12,7 +12,7 @@
     <ion-card *ngFor="let category of categories">
         <ion-card-header>
             <div style="float:left">
-                     {{category.title}}
+                     {{category.service_name}}
               </div>
            
               <div style="float:right">
@@ -21,7 +21,9 @@
                 
         </ion-card-header>
         <ion-card-content>
-            {{category.description}}
+            <div [innerHTML]="category.description">
+            </div>
+            
         </ion-card-content>
     </ion-card>
  
