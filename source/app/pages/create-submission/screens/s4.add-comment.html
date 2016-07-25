@@ -1,0 +1,22 @@
+<ion-navbar *navbar>
+	<button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	</button>
+	<ion-title>Neue Meldung einreichen</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+	<h2> Kommentar eingeben </h2>
+
+	<p>
+		Der Kommentar ist eine freiwillige Angabe, unterstützt aber die zügige Bearbeitung ihres Anliegens. 
+	</p>
+	<button (click)="submit()">
+		      Einreichen
+	      </button>
+	<button (click)="cancel()">
+		      Abbrechen
+	      </button>
+
+</ion-content>

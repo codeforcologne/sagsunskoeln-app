@@ -1,0 +1,42 @@
+<ion-navbar *navbar>
+	<button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	</button>
+	<ion-title>Neue Meldung einreichen</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+	<h2> Bild(er) hinzufügen </h2>
+	<p>
+		<button (click)="pickImage()">In Galerie auswählen</button>
+		<button (click)="takeImage()">Bild machen</button>
+	</p>
+
+	<p>
+		Hier ist eine Liste der hinzugefügten Bilder:
+
+		<ion-list>
+			<ion-item *ngFor="let photo of photos">
+				<ion-delete-button class="ion-minus-circled"></ion-delete-button>
+				{{photo.title}}
+			</ion-item>
+		</ion-list>
+
+
+	</p>
+
+
+	<p>
+		<button (click)="step2()">
+       			 Nächster Schritt
+     		 </button>
+		<button (click)="cancel()">
+		      Abbrechen
+	      </button>
+
+		  <button (click)="addItem()">
+		      Add Item
+	      </button>
+	</p>
+</ion-content>

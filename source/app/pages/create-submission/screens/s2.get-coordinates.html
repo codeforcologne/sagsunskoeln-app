@@ -1,0 +1,24 @@
+<ion-navbar *navbar>
+	<button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	</button>
+	<ion-title>Neue Meldung einreichen</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+	<h2> Ort festlegen </h2> 
+	<p>
+			
+		Deine aktuelle Koordinaten sind: {{builder.getSubmission().getLocation()}}
+	</p>
+
+	<p>
+		<button (click)="step3()">
+       			 Nächster Schritt
+     		 </button>
+		<button (click)="cancel()">
+		      Abbrechen
+	      </button>
+	</p>
+</ion-content>

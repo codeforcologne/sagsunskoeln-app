@@ -1,6 +1,6 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
-import {CreateSubmissionPage} from './../CreateSubmission/CreateSubmission.page';
-import {YourSubmissionsPage} from './../YourSubmissions/YourSubmissions.page';
+import {CreateSubmissionPage} from './../create-submission/create-submission.page';
+import {YourSubmissionsPage} from './../your-submissions/your-submissions.page';
 
 @Page({
     templateUrl: 'build/pages/start/start.html'

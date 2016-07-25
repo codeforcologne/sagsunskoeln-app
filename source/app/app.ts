@@ -1,10 +1,10 @@
 import {ViewChild} from '@angular/core';
 import {App, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {CreateSubmissionPage} from './pages/CreateSubmission/CreateSubmission.page';
-import {YourSubmissionsPage} from './pages/YourSubmissions/YourSubmissions.page';
+import {CreateSubmissionPage} from './pages/create-submission/create-submission.page';
+import {YourSubmissionsPage} from './pages/your-submissions/your-submissions.page';
 import {AllSubmissionsPage} from "./pages/all-submissions/all-submissions.page";
-import {SubmissionCategoriesPage} from './pages/SubmissionCategories/SubmissionCategories.page';
+import {SubmissionCategoriesPage} from './pages/submission-categories/submission-categories.page';
 import {StartPage} from './pages/start/start';
 
 

@@ -3,7 +3,7 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 
 
 @Page({
-  templateUrl: 'build/pages/YourSubmissions/YourSubmissions.html'
+  templateUrl: 'build/pages/your-submissions/your-submissions.html'
 })
 export class YourSubmissionsPage {
   selectedItem: any;

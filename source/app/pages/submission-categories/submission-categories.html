@@ -11,12 +11,14 @@
 
     <ion-card *ngFor="let category of categories">
         <ion-card-header>
+              
+            
             <div style="float:left">
                      {{category.service_name}}
               </div>
            
               <div style="float:right">
-                  <ion-icon name="{{category.icon}}"></ion-icon>
+                  <ion-icon name="{{category.icon}}" item-left></ion-icon>
               </div>
                 
         </ion-card-header>
