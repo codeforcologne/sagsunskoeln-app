@@ -1,47 +1,36 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {Geolocation} from 'ionic-native';
 
-/*
-  provides methods to create (and store) a submission
-*/
-class Submission {
+@Injectable()
+export class SubmissionBuilder {
+
   images: String[];
   location: any;
 
-  constructor() {
-
-  }
 
   getLocation() {
     return location; 
   }
 
-
-}
-
-
-@Injectable()
-export class SubmissionBuilder {
-  private meldung: Submission;
-
-  constructor() {
-
-    this.meldung = new Submission();
+  hasLocation() {
+    return this.location != null; 
   }
 
+
+  constructor() {
+    this.location = ""; 
+
+  }
   setLocation(location: any) {
-    this.meldung.location = location;
+    this.location = location;
   }
 
   addImage(url: string) {
-    this.meldung.images.push(url);
+    this.images.push(url);
     console.log("Image:" + url);
   }
 
-  getSubmission() {
-    return this.meldung; 
-  }
+
 }
 

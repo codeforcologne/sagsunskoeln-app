@@ -1,10 +1,7 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-/*
-  Loads the submissions from the 311 API 
-*/
 @Injectable()
 export class AllSubmissionsProvider {
   data: any = null;
@@ -33,4 +30,3 @@ export class AllSubmissionsProvider {
     });
   }
 }
-

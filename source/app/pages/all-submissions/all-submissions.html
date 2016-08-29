@@ -1,12 +1,17 @@
-<ion-navbar *navbar>
-    <button menuToggle>
-	<ion-icon name="menu"></ion-icon>
-</button>
-      <ion-title>Neuesten 20 Meldungen</ion-title>
-</ion-navbar>
+<ion-header>
+
+  <ion-navbar>
+     <button menuToggle>
+	    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Neueste Meldungen</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
 
 <ion-content padding class="all-submissions">
-    <ion-list>
+  <ion-list>
     <button ion-item *ngFor="let submission of submissions" (click)="submissionTapped($event, submission)">
       <ion-icon name="{{submission.icon}}" item-left></ion-icon>
       {{submission.service_name}}

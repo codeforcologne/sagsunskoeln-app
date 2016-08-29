@@ -1,12 +1,12 @@
 <ion-menu [content]="content">
 
   <ion-toolbar>
-    <ion-title>Sag's uns</ion-title>
+    <ion-title>Menu</ion-title>
   </ion-toolbar>
 
   <ion-content>
     <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
@@ -14,4 +14,5 @@
 
 </ion-menu>
 
-<ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

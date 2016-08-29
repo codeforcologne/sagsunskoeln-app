@@ -22,15 +22,27 @@ export class CreateSubmission_Step2 {
 
     acquireLocation() {
         console.log("Trying to acquire coordinates");
-        Geolocation.getCurrentPosition().then((resp) => {
-            console.log("Coordinates are "+resp.coords.latitude);
+        if(this.builder.hasLocation()) {
+            return this.builder.getLocation();
+        } else {
+Geolocation.getCurrentPosition().then((resp) => {
+            console.log("Coordinates are " + resp.coords.latitude + "," + resp.coords.longitude);
             this.builder.setLocation(resp.coords);
+
+            return resp.coords; 
         });
+        }
+        
 
     }
 
 
     // Get location
+    printLocation() {
+        return this.builder.getLocation();
+    }
+
+
     step3() {
         console.log("Switching to next step 3.");
 

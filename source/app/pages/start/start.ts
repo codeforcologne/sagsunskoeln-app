@@ -1,20 +1,23 @@
-import {Page, NavController, NavParams} from 'ionic-angular';
-import {CreateSubmissionPage} from './../create-submission/create-submission.page';
-import {YourSubmissionsPage} from './../your-submissions/your-submissions.page';
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
-@Page({
-    templateUrl: 'build/pages/start/start.html'
+import {CreateSubmissionPage} from './../create-submission/create-submission';
+
+@Component({
+  templateUrl: 'build/pages/start/start.html',
 })
 export class StartPage {
-    constructor(private nav: NavController, navParams: NavParams) {
 
-    }
+  constructor(private navCtrl: NavController) {
+
+  }
 
     jumpToList() {
-        this.nav.push(YourSubmissionsPage);
+        // this.nav.push(YourSubmissionsPage);
     }
 
     jumpToNew() {
-        this.nav.push(CreateSubmissionPage);
+        this.navCtrl.push(CreateSubmissionPage);
     }
+    
 }

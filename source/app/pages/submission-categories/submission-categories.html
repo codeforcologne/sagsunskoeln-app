@@ -1,13 +1,15 @@
-<ion-navbar *navbar>
-    <button menuToggle>
-	<ion-icon name="menu"></ion-icon>
-</button>
+<ion-header>
+
+  <ion-navbar>
+     <button menuToggle>
+	    <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Kategorien</ion-title>
-</ion-navbar>
+  </ion-navbar>
 
+</ion-header>
 
-
-<ion-content>
+<ion-content padding>
 
     <ion-card *ngFor="let category of categories">
         <ion-card-header>

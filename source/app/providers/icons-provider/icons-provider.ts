@@ -1,13 +1,13 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class IconsProvider {
 
-  constructor(public http: Http) { }
+  constructor(private http: Http) {}
 
-  getIcon(code: string) {
+   getIcon(code: string) {
     switch (code) {
       case "10":
         return "bicycle";
@@ -31,5 +31,6 @@ export class IconsProvider {
         return "shirt";
     }
   }
+
 }
 

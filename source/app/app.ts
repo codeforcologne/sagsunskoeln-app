@@ -1,54 +1,50 @@
-import {ViewChild} from '@angular/core';
-import {App, Platform, MenuController, Nav} from 'ionic-angular';
-import {StatusBar} from 'ionic-native';
-import {CreateSubmissionPage} from './pages/create-submission/create-submission.page';
-import {YourSubmissionsPage} from './pages/your-submissions/your-submissions.page';
-import {AllSubmissionsPage} from "./pages/all-submissions/all-submissions.page";
-import {SubmissionCategoriesPage} from './pages/submission-categories/submission-categories.page';
-import {StartPage} from './pages/start/start';
+import { Component, ViewChild } from '@angular/core';
+import { ionicBootstrap, Platform, Nav } from 'ionic-angular';
+import { StatusBar } from 'ionic-native';
+
+import { StartPage } from './pages/start/start';
+import { SubmissionCategoriesPage } from './pages/submission-categories/submission-categories';
+import { AllSubmissionsPage } from "./pages/all-submissions/all-submissions";
+import { CreateSubmissionPage } from "./pages/create-submission/create-submission";
 
 
-@App({
-    templateUrl: 'build/app.html',
-    config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+@Component({
+  templateUrl: 'build/app.html'
 })
 class MyApp {
-    @ViewChild(Nav) nav: Nav;
+  @ViewChild(Nav) nav: Nav;
 
-    // make HelloIonicPage the root (or first) page
-    rootPage: any = StartPage;
-    pages: Array<{ title: string, component: any }>;
+  rootPage: any = StartPage;
 
-    constructor(
-        private platform: Platform,
-        private menu: MenuController
-        ) {
-        this.initializeApp();
+  pages: Array<{title: string, component: any}>;
 
-        // set our app's pages
-        this.pages = [
-            { title: 'Start', component: StartPage },
-            { title: 'Neues Anliegen', component: CreateSubmissionPage },
-            { title: 'Deine Meldungen', component: YourSubmissionsPage },
-            { title: 'Alle Meldungen', component: AllSubmissionsPage },
-            { title: 'Kategorien', component: SubmissionCategoriesPage }
-        ];
-    }
+  constructor(public platform: Platform) {
+    this.initializeApp();
 
-    initializeApp() {
-        this.platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            StatusBar.styleDefault();
-        });
-    }
+    // used for an example of ngFor and navigation
+    this.pages = [
+      { title: 'Start', component: StartPage },
+      { title: 'Kategorien', component: SubmissionCategoriesPage },
+      { title: 'Neues Anliegen', component: CreateSubmissionPage },
+            // { title: 'Deine Meldungen', component: YourSubmissionsPage },
+     { title: 'Alle Meldungen', component: AllSubmissionsPage },
+    ];
 
-    openPage(page) {
-     	console.log("Switching to"+page); 
-     
-        // close the menu when clicking a link from the menu
-        this.menu.close();
-        // navigate to the new page if it is not the current page
-        this.nav.setRoot(page.component);
-    }
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      StatusBar.styleDefault();
+    });
+  }
+
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    this.nav.setRoot(page.component);
+  }
 }
+
+ionicBootstrap(MyApp);
