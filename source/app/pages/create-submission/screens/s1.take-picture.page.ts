@@ -11,17 +11,11 @@ import 'rxjs/add/operator/map';
 })
 export class CreateSubmission_Step1 {
     builder: SubmissionBuilder;
-    photos: Array<{ title: string, content: any }>;
+    
+     public base64Image: string;
 
     constructor(private nav: NavController, navParams: NavParams) {
         this.builder = navParams.get('builder');
-        this.photos = [];
-
-        this.photos.push({
-            title: "Beispielbild",
-            content: "nothing"
-        });
-
     }
 
 
@@ -36,7 +30,7 @@ export class CreateSubmission_Step1 {
         };
         ImagePicker.getPictures(options).then((results) => {
             for (var i = 0; i < results.length; i++) {
-                this.builder.addImage(results[i]);
+                this.builder.addImage("Neues Bild", results[i]);
             }
         }, (err) => {
         });
@@ -53,17 +47,16 @@ export class CreateSubmission_Step1 {
         };
         Camera.getPicture(options).then(
             res => {
-                console.log("We have taken a picture!");
-                this.builder.addImage(res);
+                this.base64Image = "data:image/jpeg;base64," + res;
+                console.log("We have picked a picture!");
+                this.builder.addImage("Neues Bild", "data:image/jpeg;base64," + res);
             }
         );
     }
 
-    push(ph: any) {
-        this.photos.push({
-            title: "Neues Bild",
-            content: ph
-        });
+
+    public getImages() {
+        return this.builder.getImages(); 
     }
 
     // Get location
@@ -83,14 +76,7 @@ export class CreateSubmission_Step1 {
 
 
 
-    addItem() {
-        this.photos.push({
-            title: "Ein anderes Bild",
-            content: "nothing"
-        }
-        );
-    }
-
+  
 
 }
 
