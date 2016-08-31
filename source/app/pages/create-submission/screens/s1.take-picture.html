@@ -5,6 +5,14 @@
 	    <ion-icon name="menu"></ion-icon>
     </button>
 		<ion-title>Neue Meldung einreichen</ion-title>
+
+		 <ion-buttons end>
+			<button light>
+	    <ion-icon name="help"></ion-icon>
+    		</button>
+		 </ion-buttons>
+
+
 	</ion-navbar>
 </ion-header>
 
@@ -19,9 +27,6 @@
 		<img [src]="photo.base64Image" *ngIf="photo.base64Image" />
 			
 		<ion-row no-padding>
-			<ion-col>
-				{{photo.title}}
-			</ion-col>
 			<ion-col text-right>
 				<button clear small danger>
          		<ion-icon name='trash'></ion-icon>
@@ -30,16 +35,18 @@
 			</ion-col>
 		</ion-row>
 	</ion-card>
-
-
-
-	<p>
-		<button (click)="step2()">
-       			 Nächster Schritt
-     		 </button>
-		<button (click)="cancel()">
-		      Abbrechen
-	      </button>
-
-	</p>
 </ion-content>
+
+<ion-footer>
+ <ion-buttons end>
+		<button (click)="step2()">
+			<ion-icon name='arrow-forward'></ion-icon>
+			Weiter
+			 
+     	</button>
+		<button light (click)="cancel()">
+		     <ion-icon name='close'></ion-icon>
+			 Abbrechen
+	    </button>
+ </ion-buttons>
+</ion-footer>

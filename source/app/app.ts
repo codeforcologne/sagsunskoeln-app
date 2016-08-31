@@ -5,7 +5,7 @@ import { StatusBar } from 'ionic-native';
 import { StartPage } from './pages/start/start';
 import { SubmissionCategoriesPage } from './pages/submission-categories/submission-categories';
 import { AllSubmissionsPage } from "./pages/all-submissions/all-submissions";
-import { CreateSubmissionPage } from "./pages/create-submission/create-submission";
+import { CreateSubmission_Step1 } from "./pages/create-submission/screens/s1.take-picture.page";
 
 
 @Component({
@@ -25,7 +25,7 @@ class MyApp {
     this.pages = [
       { title: 'Start', component: StartPage },
       { title: 'Kategorien', component: SubmissionCategoriesPage },
-      { title: 'Neues Anliegen', component: CreateSubmissionPage },
+      { title: 'Neues Anliegen', component: CreateSubmission_Step1 },
             // { title: 'Deine Meldungen', component: YourSubmissionsPage },
      { title: 'Alle Meldungen', component: AllSubmissionsPage },
     ];

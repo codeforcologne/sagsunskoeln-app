@@ -42,7 +42,6 @@ export class SubmissionBuilder {
 
   addImage(title: string, base64Image: string) {
     this.images.push({title, base64Image});
-    console.log(base64Image); 
   }
 
   getImages() {

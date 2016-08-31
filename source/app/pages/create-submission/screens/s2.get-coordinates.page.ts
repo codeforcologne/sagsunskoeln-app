@@ -31,7 +31,7 @@ export class CreateSubmission_Step2 {
     }
 
     cancel() {
-        this.nav.push(StartPage)
+        this.nav.popToRoot()
     }
 
 

@@ -2,20 +2,20 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 import {ImagePicker} from 'ionic-native';
 import {Camera} from 'ionic-native';
 import {CreateSubmission_Step2} from './s2.get-coordinates.page'
+import {CreateSubmission_Step3} from './s3.select-category.page'
 import {StartPage} from './../../start/start'
 import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder'
 import 'rxjs/add/operator/map';
 
 @Page({
-    templateUrl: 'build/pages/create-submission/screens/s1.take-picture.html'
+    templateUrl: 'build/pages/create-submission/screens/s1.take-picture.html', 
+    providers: [SubmissionBuilder]
 })
 export class CreateSubmission_Step1 {
-    builder: SubmissionBuilder;
     
-     public base64Image: string;
-
-    constructor(private nav: NavController, navParams: NavParams) {
-        this.builder = navParams.get('builder');
+    constructor(private nav: NavController, navParams: NavParams, 
+                private builder: SubmissionBuilder) {
+        
     }
 
 
@@ -47,7 +47,6 @@ export class CreateSubmission_Step1 {
         };
         Camera.getPicture(options).then(
             res => {
-                this.base64Image = "data:image/jpeg;base64," + res;
                 console.log("We have picked a picture!");
                 this.builder.addImage("Neues Bild", "data:image/jpeg;base64," + res);
             }
@@ -59,11 +58,18 @@ export class CreateSubmission_Step1 {
         return this.builder.getImages(); 
     }
 
-    // Get location
+    // jump to next step
     step2() {
-        console.log("Jump to step 2");
 
-        this.nav.push(CreateSubmission_Step2, {
+    
+
+        // we skip setting the location for now
+        // this.nav.push(CreateSubmission_Step2, {
+        //     builder: this.builder
+        // });
+
+
+        this.nav.push(CreateSubmission_Step3, {
             builder: this.builder
         });
     }
@@ -71,7 +77,7 @@ export class CreateSubmission_Step1 {
 
 
     cancel() {
-        this.nav.push(StartPage)
+        this.nav.popToRoot()
     }
 
 

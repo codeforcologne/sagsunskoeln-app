@@ -1,24 +1,31 @@
 <ion-header>
 
-  <ion-navbar>
-     <button menuToggle>
+	<ion-navbar>
+		<button menuToggle>
 	    <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Neue Meldung einreichen</ion-title>
-  </ion-navbar>
+		<ion-title>Kommentar eingeben </ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<h2> Kommentar eingeben </h2>
-
-	<p>
-		Der Kommentar ist eine freiwillige Angabe, unterstützt aber die zügige Bearbeitung ihres Anliegens. 
-	</p>
-	<button (click)="submit()">
-		      Einreichen
-	      </button>
-	<button (click)="cancel()">
-		      Abbrechen
-	      </button>
+<ion-item>
+   <ion-label stacked>Kommentar</ion-label>
+   <ion-textarea [(ngModel)]="comment"></ion-textarea>
+ </ion-item>
 
 </ion-content>
+
+<ion-footer>
+	 <ion-buttons end>
+	<button (click)="submit()">
+		<ion-icon name='checkmark-circled'></ion-icon>
+		      Einreichen
+	      </button>
+	<button light (click)="cancel()">
+		<ion-icon name='close'></ion-icon>
+		      Abbrechen
+	      </button>
+ </ion-buttons>
+
+</ion-footer>

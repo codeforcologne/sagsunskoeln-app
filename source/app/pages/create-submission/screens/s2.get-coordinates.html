@@ -1,26 +1,31 @@
 <ion-header>
 
-  <ion-navbar>
-     <button menuToggle>
+	<ion-navbar>
+		<button menuToggle>
 	    <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Neue Meldung einreichen</ion-title>
-  </ion-navbar>
+		<ion-title>Neue Meldung einreichen</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<h2> Ort festlegen </h2> 
+	<h2> Ort festlegen </h2>
 	<p>
-			
+
 		Deine aktuelle Koordinaten sind: {{printLocation()}}
 	</p>
-
-	<p>
+</ion-content>
+<ion-footer>
+	<ion-buttons end>
 		<button (click)="step3()">
-       			 Nächster Schritt
-     		 </button>
-		<button (click)="cancel()">
+     		<ion-icon name='arrow-forward'></ion-icon>
+			Weiter
+			 
+     	</button>
+		<button light (click)="cancel()">
+			<ion-icon name='close'></ion-icon>
 		      Abbrechen
 	      </button>
-	</p>
-</ion-content>
+	</ion-buttons>
+
+</ion-footer>

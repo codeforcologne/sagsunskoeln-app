@@ -5,14 +5,14 @@ import {StartPage} from './../../start/start'
     templateUrl: 'build/pages/create-submission/screens/s4.add-comment.html'
 })
 export class CreateSubmission_Step4 {
-    picture: any; 
+    comment: string; 
 
     constructor(private nav: NavController, navParams: NavParams) {
     }
 
 
     cancel() {
-        this.nav.push(StartPage)
+        this.nav.popToRoot()
     }
 
 }

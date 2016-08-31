@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import {CreateSubmissionPage} from './../create-submission/create-submission';
+import {CreateSubmission_Step1} from './../create-submission/screens/s1.take-picture.page';
 
 @Component({
   templateUrl: 'build/pages/start/start.html',
@@ -17,7 +17,7 @@ export class StartPage {
     }
 
     jumpToNew() {
-        this.navCtrl.push(CreateSubmissionPage);
+        this.navCtrl.push(CreateSubmission_Step1);
     }
     
 }
