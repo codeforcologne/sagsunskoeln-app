@@ -12,38 +12,57 @@
 
 <ion-content padding class="getting-started">
 
-  <h2>Informieren Sie uns über Ihr Anliegen - wir kümmern uns darum!</h2>
-  <ion-card padding>
-    <ion-card-header>
-       <h2> Anliegen melden </h2>
-    </ion-card-header>
-    <ion-card-content>
-          <button fab fab-right (click)="jumpToNew()">
-          <ion-icon name="add"></ion-icon>
 
-        </button>
-    <div style="float:left; width: 70%">
-      Über "Sag's uns" können Sie die Stadtverwaltung über Probleme im Kölner Stadtbild informieren. Dazu gehen Sie einfach auf "Neues Anliegen" im Menü, machen ein Bild, wählen eine passende Kategorie und senden uns ihr Anliegen. Falls gewünscht, können Sie
-      uns in zusätzlich in wenigen Worten den Grund ihres Anliegens schildern.
-    </div>
-    </ion-card-content>
-      
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-90>
+            <button dark clear (click)="jumpToNew()" >
+              <ion-icon class="start-icon" name="add"></ion-icon>
+              <label class="start-title">Anliegen melden</label>
+            </button>
+        </ion-col>
+        <ion-col width-10> 
+            <button light clear>
+                <ion-icon class="help-icon" name="help"></ion-icon>
+            </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 
-    <ion-card padding>
-    <ion-card-header>
-        <h2> Deine Anliegen anzeigen</h2>
-    </ion-card-header>
-    <ion-card-content>
-        <button fab fab-right (click)="jumpToList()">
-          <ion-icon name="compass"></ion-icon>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-90>
+            <button dark clear (click)="jumpToList()"  >
+            <ion-icon class="start-icon" name="compass"></ion-icon>
+              <label class="start-title">Deine Anliegen</label>
+            </button>
+        </ion-col>
+        <ion-col width-10> 
+            <button light clear>
+                <ion-icon class="help-icon" name="help"></ion-icon>
+            </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 
-        </button>
-    <div style="float:left; width: 70%">
-        Über das Menü können Sie jederzeit den Status ihrer Anliegen einsehen. 
-    </div>
-    </ion-card-content>
-      
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-90>
+            <button (click)="jumpToHelp()" dark clear>
+    <ion-icon class="start-icon" name="help"></ion-icon>
+                <label class="start-title">Mehr erfahren</label>
+            </button>
+        </ion-col>
+        <ion-col width-10> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 
 </ion-content>

@@ -5,14 +5,17 @@ import {Geolocation} from 'ionic-native';
 
 @Injectable()
 export class SubmissionBuilder {
-
+  id: string; 
   latitude: Number;
   longitude: Number;
   images: Array<{ title: string, base64Image: string }>;
 
   constructor() {
-    // acquire location as soon as we build a new SubmissionBuilder
+    // id (needed as reference in storage) is simply current time
+    this.id = "id#"+new Date().toISOString(); 
     this.images = Array(); 
+
+    // acquire location as soon as we build a new SubmissionBuilder
     this.acquireLocation(); 
   }
 
@@ -24,9 +27,10 @@ export class SubmissionBuilder {
             });
   }
 
-  getLocation() {
-    return location; 
+  getIdentifier() {
+    return this.id; 
   }
+
 
   getLatitude() {
     return this.latitude; 

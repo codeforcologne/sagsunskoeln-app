@@ -4,7 +4,7 @@
 		<button menuToggle>
 	    <ion-icon name="menu"></ion-icon>
     </button>
-		<ion-title>Neue Meldung einreichen</ion-title>
+		<ion-title>Bild(er) hinzufügen</ion-title>
 
 		 <ion-buttons end>
 			<button light>
@@ -14,14 +14,26 @@
 
 
 	</ion-navbar>
+
+	<ion-toolbar no-shadow >
+		<ion-row>
+          <ion-col width-50>
+              <button full large primary  (click)="pickImage()">
+			          <ion-icon name="albums"></ion-icon>
+                <label>Auswählen</label>
+              </button>
+          </ion-col>
+          <ion-col width-50>
+              <button full large primary (click)="takeImage()">
+			          <ion-icon name="camera"></ion-icon>
+                <label>Foto</label>
+              </button>
+          </ion-col>
+      </ion-row>
+ 	</ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-	<h2> Bild(er) hinzufügen </h2>
-	<p>
-		<button (click)="pickImage()">In Galerie auswählen</button>
-		<button (click)="takeImage()">Neues Foto</button>
-	</p>
 
 	<ion-card *ngFor="let photo of getImages()">
 		<img [src]="photo.base64Image" *ngIf="photo.base64Image" />
@@ -38,15 +50,18 @@
 </ion-content>
 
 <ion-footer>
- <ion-buttons end>
-		<button (click)="step2()">
-			<ion-icon name='arrow-forward'></ion-icon>
-			Weiter
-			 
-     	</button>
-		<button light (click)="cancel()">
-		     <ion-icon name='close'></ion-icon>
-			 Abbrechen
-	    </button>
- </ion-buttons>
+	<ion-row>
+          <ion-col width-67>
+			  <button full primary (click)="step2()">
+             <ion-icon name='arrow-forward'></ion-icon>
+                <label>Weiter</label>
+              </button>
+          </ion-col>
+          <ion-col width-33>
+              <button full danger (click)="cancel()">
+			    <ion-icon name='close'></ion-icon>
+                <label>Abbrechen</label>
+              </button>
+          </ion-col>
+      </ion-row>
 </ion-footer>
