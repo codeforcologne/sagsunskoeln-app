@@ -8,30 +8,33 @@
 	</ion-navbar>
 </ion-header>
 <ion-content padding>
-	<ion-list radio-group>
+	<!--(ionChange)="checkValue($event)-->
+	<ion-list radio-group [(ngModel)]="categoryChoice">
+		<ion-list-header>
+			Kategorien
+		</ion-list-header>
 		<ion-item *ngFor="let category of categories">
-			<ion-icon name='{{category.icon}}'></ion-icon>
+			<ion-icon class="card-icon" name="{{category.icon}}"></ion-icon>
 			<ion-label>{{category.service_name}}</ion-label>
-			<ion-radio value="{{category.service_name}}"></ion-radio>
+			<ion-radio  value="{{category.service_name}}"></ion-radio>
 		</ion-item>
 	</ion-list>
-
 </ion-content>
 
 <ion-footer>
 	<ion-row>
-          <ion-col width-67>
-			  <button full primary (click)="step4()">
-             <ion-icon name='arrow-forward'></ion-icon>
+		<ion-col width-67>	
+			<button [disabled]="categoryChoice.length == 0" full primary (click)="step4()"> 
+				<ion-icon name='arrow-forward'></ion-icon>
                 <label>Weiter</label>
-              </button>
-          </ion-col>
-          <ion-col width-33>
-              <button full danger (click)="cancel()">
+            </button>
+		</ion-col>
+		<ion-col width-33>
+			<button full danger (click)="cancel()">
 			    <ion-icon name='close'></ion-icon>
                 <label>Abbrechen</label>
               </button>
-          </ion-col>
-      </ion-row>
+		</ion-col>
+	</ion-row>
 
 </ion-footer>

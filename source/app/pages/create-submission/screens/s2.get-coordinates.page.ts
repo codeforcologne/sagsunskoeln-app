@@ -20,7 +20,7 @@ export class CreateSubmission_Step2 {
 
     // Get location
     printLocation() {
-        return this.builder.getLatitude()+ ", " + this.builder.getLongitude() ; 
+        return this.builder.getSubmission().latitude+ ", " + this.builder.getSubmission().longitude ; 
     }
 
 

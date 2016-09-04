@@ -17,7 +17,7 @@ export class SubmissionCategoriesPage {
 
   constructor(private navCtrl: NavController, 
         public categoriesProvider: CategoriesProvider, 
-        public iconsProvider: IconsProvider, 
+        // public iconsProvider: IconsProvider, 
         public modalCtrl: ModalController) {
     this.loadCategories();
   }
@@ -26,9 +26,9 @@ export class SubmissionCategoriesPage {
     this.categoriesProvider.load()
       .then(data => {
 
-        for (let category of data) {
-          data.icon = this.iconsProvider.getIcon(category.service_code);
-        }
+        // for (let category of data) {
+        //   data.icon = this.iconsProvider.getIcon(category.service_code);
+        // }
         this.categories = data;
       }
 

@@ -3,57 +3,54 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Geolocation} from 'ionic-native';
 
-@Injectable()
-export class SubmissionBuilder {
+export class Submission {
   id: string; 
-  latitude: Number;
-  longitude: Number;
+  latitude: number;
+  longitude: number;
   images: Array<{ title: string, base64Image: string }>;
+  comment: string; 
 
   constructor() {
     // id (needed as reference in storage) is simply current time
     this.id = "id#"+new Date().toISOString(); 
     this.images = Array(); 
+  }
+
+
+
+}
+
+
+
+@Injectable()
+export class SubmissionBuilder {
+  submission: Submission; 
+
+  constructor() {
+    this.submission = new Submission(); 
 
     // acquire location as soon as we build a new SubmissionBuilder
     this.acquireLocation(); 
   }
 
-  acquireLocation() {
+  private acquireLocation() {
      Geolocation.getCurrentPosition().then((resp) => {
                 console.log("Coordinates are " + resp.coords.latitude + "," + resp.coords.longitude);
-                this.latitude = resp.coords.latitude; 
-                this.longitude = resp.coords.longitude; 
+                this.submission.latitude = resp.coords.latitude; 
+                this.submission.longitude = resp.coords.longitude; 
             });
   }
 
-  getIdentifier() {
-    return this.id; 
+  public addImage(title: string, base64Image: string) {
+    this.submission.images.push({title, base64Image});
   }
 
-
-  getLatitude() {
-    return this.latitude; 
+  public getSubmission() {
+    return this.submission; 
   }
 
-  getLongitude() {
-    return this.longitude; 
+  public addComment(comment: string) {
+    this.submission.comment = comment; 
   }
-
-  hasLocation() {
-    return this.latitude > -200; 
-  }
-
-  addImage(title: string, base64Image: string) {
-    this.images.push({title, base64Image});
-  }
-
-  getImages() {
-    return this.images; 
-  }
-
-
-
-
 }
 

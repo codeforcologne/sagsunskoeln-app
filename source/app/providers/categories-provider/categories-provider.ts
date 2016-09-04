@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CategoriesProvider {
 
-data: any = null;
+  data: any = null;
 
   constructor(public http: Http) {}
 
@@ -20,12 +20,42 @@ data: any = null;
       this.http.get('data/services.json')
         .map(res => res.json())
         .subscribe(data => {
+          
+
+          for (let category of data) {
+            data.icon = this.getIcon(category.service_code);
+          }
           this.data = data;
           resolve(this.data);
         });
     });
 
     
+  }
+
+  getIcon(code: string) {
+    switch (code) {
+      case "10":
+        return "bicycle";
+      case "11":
+        return "trash";
+      case "13":
+        return "bulb";
+      case "14":
+        return "print";
+      case "16":
+        return "headset";
+      case "17":
+        return "body";
+      case "19":
+        return "shirt";
+      case "20":
+        return "wine";
+      case "21":
+        return "football";
+      default:
+        return "shirt";
+      }
   }
 
 }

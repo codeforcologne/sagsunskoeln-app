@@ -4,7 +4,7 @@ import {Camera} from 'ionic-native';
 import {CreateSubmission_Step2} from './s2.get-coordinates.page'
 import {CreateSubmission_Step3} from './s3.select-category.page'
 import {StartPage} from './../../start/start'
-import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder'
+import {SubmissionBuilder, Submission} from './../../../providers/submission-builder/submission-builder'
 import 'rxjs/add/operator/map';
 
 @Page({
@@ -55,14 +55,11 @@ export class CreateSubmission_Step1 {
 
 
     public getImages() {
-        return this.builder.getImages(); 
+        return this.builder.getSubmission().images;  
     }
 
     // jump to next step
     step2() {
-
-    
-
         // we skip setting the location for now
         // this.nav.push(CreateSubmission_Step2, {
         //     builder: this.builder
