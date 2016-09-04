@@ -2,9 +2,9 @@
 
     .card-image {
          height: 100px;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
     }
 
   ion-card {
@@ -15,7 +15,7 @@
     position: absolute;
     top: 5%;
     left: 5%; 
-    font-size: 2.0em;
+    font-size: 2rem;
     width: 100%;
     font-weight: bold;
     color: #fff;
@@ -23,9 +23,9 @@
 
   .card-icon {
     position: absolute;
-    font-size: 4em;
+    font-size: 4rem;
     width: 100%;
-    color: #FFF;
+    color: #666;
     top: 5%;
     left: 90%;
   }
