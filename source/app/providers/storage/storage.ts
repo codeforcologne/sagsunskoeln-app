@@ -12,7 +12,6 @@ export class Storage {
 
 
   public storeSubmission(sub: Submission) {
-
     console.log("trying to store: "+sub);
      NativeStorage.setItem(sub.id, 
             sub
@@ -20,7 +19,26 @@ export class Storage {
             () => console.log('Stored item!'),
             error => console.error('Error storing item', error)
         );
-
   }
+
+  public getYourSubmissions() {
+
+    // returns a list of all items
+    NativeStorage.getItem("yourSubmissions").then(
+      // array of references
+      data => console.log(data),
+      error => console.error(error) 
+    ) ; 
+  }
+
+  public getFavorites() {
+    // returns a list of all items
+    NativeStorage.getItem("favorites").then(
+      // array of references
+      data => console.log(data),
+      error => console.error(error) 
+    ) ;
+  } 
+
 }
 

@@ -1,9 +1,8 @@
 {
   "name": "SagsUnsApp",
-  "app_id": "de.okfn.cgn.sagsuns",
+  "app_id": "ba5cf81a",
   "v2": true,
-  "typescript": true, 
-
+  "typescript": true,
   "proxies": [
     {
       "path": "/allSubmissions",

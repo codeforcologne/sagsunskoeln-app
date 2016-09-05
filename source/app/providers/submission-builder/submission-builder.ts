@@ -4,11 +4,14 @@ import 'rxjs/add/operator/map';
 import {Geolocation} from 'ionic-native';
 
 export class Submission {
-  id: string; 
+  id: string; // profil#timestamp 
   latitude: number;
   longitude: number;
   images: Array<{ title: string, base64Image: string }>;
   comment: string; 
+  // status
+  // submission Date
+  // profil
 
   constructor() {
     // id (needed as reference in storage) is simply current time
