@@ -13,7 +13,12 @@ export class YourSubmissionsPage {
   }
 
   private loadSubmissions() {
-    this.storage.getYourSubmissions(); 
+    this.storage.getMySubmissions().then(
+      data => {
+        console.log(data);
+      }
+    ) 
+     
 
   }
 
