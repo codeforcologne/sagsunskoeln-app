@@ -1,26 +1,24 @@
-import {Page, NavController, NavParams} from 'ionic-angular';
-import {ImagePicker} from 'ionic-native';
-import {Camera} from 'ionic-native';
-import {CreateSubmission_Step2} from './s2.get-coordinates.page'
-import {CreateSubmission_Step3} from './s3.select-category.page'
-import {StartPage} from './../../start/start'
-import {SubmissionBuilder, Submission} from './../../../providers/submission-builder/submission-builder'
+import { Page, NavController, NavParams } from 'ionic-angular';
+import { ImagePicker } from 'ionic-native';
+import { Camera } from 'ionic-native';
+import { CreateSubmissionCategory } from './s3.select-category.page';
+import { SubmissionBuilder } from './../../../providers/submission-builder/submission-builder';
 import 'rxjs/add/operator/map';
 
 @Page({
-    templateUrl: 'build/pages/create-submission/screens/s1.take-picture.html', 
+    templateUrl: 'build/pages/create-submission/screens/s1.take-picture.html',
     providers: [SubmissionBuilder]
 })
-export class CreateSubmission_Step1 {
-    
-    constructor(private nav: NavController, navParams: NavParams, 
-                private builder: SubmissionBuilder) {
-        
+export class CreateSubmissionImages {
+
+    constructor(private nav: NavController, navParams: NavParams,
+        private builder: SubmissionBuilder) {
+
     }
 
 
     pickImage() {
-        console.log("pick an image");
+        console.log('pick an image');
 
         let options = {
             maximumImagesCount: 10,
@@ -30,32 +28,32 @@ export class CreateSubmission_Step1 {
         };
         ImagePicker.getPictures(options).then((results) => {
             for (var i = 0; i < results.length; i++) {
-                this.builder.addImage("Neues Bild", results[i]);
+                this.builder.addImage('Neues Bild', results[i]);
             }
         }, (err) => {
         });
     }
 
     takeImage() {
-    	   let options = {
+        let options = {
             destinationType: Camera.DestinationType.DATA_URL
             , sourceType: Camera.PictureSourceType.CAMERA
             , encodingType: Camera.EncodingType.JPEG
-            , quality: 100
+            , quality: 50
             , allowEdit: false
             , saveToPhotoAlbum: false
         };
         Camera.getPicture(options).then(
             res => {
-                console.log("We have picked a picture!");
-                this.builder.addImage("Neues Bild", "data:image/jpeg;base64," + res);
+                console.log('We have picked a picture!');
+                this.builder.addImage('Neues Bild', 'data:image/jpeg;base64,' + res);
             }
         );
     }
 
 
     public getImages() {
-        return this.builder.getSubmission().images;  
+        return this.builder.getSubmission().images;
     }
 
     // jump to next step
@@ -66,7 +64,7 @@ export class CreateSubmission_Step1 {
         // });
 
 
-        this.nav.push(CreateSubmission_Step3, {
+        this.nav.push(CreateSubmissionCategory, {
             builder: this.builder
         });
     }
@@ -74,12 +72,12 @@ export class CreateSubmission_Step1 {
 
 
     cancel() {
-        this.nav.popToRoot()
+        this.nav.popToRoot();
     }
 
 
 
-  
+
 
 }
 

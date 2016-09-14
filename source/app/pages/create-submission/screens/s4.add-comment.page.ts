@@ -1,14 +1,13 @@
 import {Page,  NavController, NavParams} from 'ionic-angular';
-import { StartPage } from './../../start/start'
 
-import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder'
-import {Storage} from './../../../providers/storage/storage'
+import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder';
+import {Storage} from './../../../providers/storage/storage.sqlite';
 
 @Page({
     templateUrl: 'build/pages/create-submission/screens/s4.add-comment.html', 
     providers: [Storage]
 })
-export class CreateSubmission_Step4 {
+export class CreateSubmissionDescription {
     comment: string; 
     builder: SubmissionBuilder;
 
@@ -17,19 +16,20 @@ export class CreateSubmission_Step4 {
     }
 
     submit() {
-        console.log("test1");
+        console.log('test1');
         console.log(this.builder);
         
         this.builder.addComment(this.comment); 
         
-        console.log("test2");
+        console.log('test2');
 
         this.storage.storeSubmission(this.builder.getSubmission()); 
+        this.nav.popToRoot();
     }
 
 
     cancel() {
-        this.nav.popToRoot()
+        this.nav.popToRoot();
     }
 
 }

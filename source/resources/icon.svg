@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="icon.svg">
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/home/pajoma/workspace/sagsunskoeln-app/source/resources/icon.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="227.32632"
-     inkscape:cy="149.44733"
+     inkscape:cx="-144.10225"
+     inkscape:cy="146.59019"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,79 +58,102 @@
      id="layer1"
      transform="translate(0,-540.36219)">
     <path
-       style="fill:#ff0000"
+       style="display:inline;fill:#ffffff"
+       id="path3336-4-3-6"
+       sodipodi:type="arc"
+       sodipodi:cx="258.57144"
+       sodipodi:cy="792.36218"
+       sodipodi:rx="247.14287"
+       sodipodi:ry="247.14287"
+       sodipodi:start="0"
+       sodipodi:end="6.275914"
+       d="M 505.71431,792.36218 A 247.14287,247.14287 0 0 1 259.0207,1039.5046 247.14287,247.14287 0 0 1 11.430207,793.26071 247.14287,247.14287 0 0 1 257.22366,545.22299 247.14287,247.14287 0 0 1 505.70778,790.56515"
+       sodipodi:open="true" />
+    <path
+       style="display:inline;fill:#000000"
+       id="path3336-4-3-6-7"
+       sodipodi:type="arc"
+       sodipodi:cx="258.57144"
+       sodipodi:cy="792.36218"
+       sodipodi:rx="233.25679"
+       sodipodi:ry="233.25679"
+       sodipodi:start="0"
+       sodipodi:end="6.275914"
+       d="M 491.82823,792.36218 A 233.25679,233.25679 0 0 1 258.99546,1025.6186 233.25679,233.25679 0 0 1 25.316193,793.21022 233.25679,233.25679 0 0 1 257.29939,559.10886 233.25679,233.25679 0 0 1 491.82207,790.66612"
+       sodipodi:open="true" />
+    <path
+       style="display:inline;fill:#ff0000"
        id="path3336"
        sodipodi:type="arc"
-       sodipodi:cx="251.42856"
-       sodipodi:cy="780.93365"
-       sodipodi:rx="215.71428"
-       sodipodi:ry="215.71428"
+       sodipodi:cx="258.57144"
+       sodipodi:cy="792.36218"
+       sodipodi:rx="227.28317"
+       sodipodi:ry="227.28317"
        sodipodi:start="0"
        sodipodi:end="6.275914"
-       d="M 467.14284,780.93365 A 215.71428,215.71428 0 0 1 251.82069,996.64758 215.71428,215.71428 0 0 1 35.715705,781.71792 215.71428,215.71428 0 0 1 250.25217,565.22258 215.71428,215.71428 0 0 1 467.13713,779.36514"
+       d="M 485.85461,792.36218 A 227.28317,227.28317 0 0 1 258.9846,1019.645 227.28317,227.28317 0 0 1 31.289771,793.1885 227.28317,227.28317 0 0 1 257.33196,565.08239 227.28317,227.28317 0 0 1 485.84861,790.70955"
        sodipodi:open="true" />
     <path
-       style="fill:#333333"
+       style="display:inline;fill:#333333"
        id="path3336-4"
        sodipodi:type="arc"
-       sodipodi:cx="251.42856"
-       sodipodi:cy="780.93365"
-       sodipodi:rx="197.85713"
-       sodipodi:ry="201.42857"
+       sodipodi:cx="255.10381"
+       sodipodi:cy="791.43121"
+       sodipodi:rx="208.46835"
+       sodipodi:ry="212.23132"
        sodipodi:start="0"
        sodipodi:end="6.275914"
-       d="M 449.28569,780.93365 A 197.85713,201.42857 0 0 1 251.78823,982.3619 197.85713,201.42857 0 0 1 53.572734,781.66598 197.85713,201.42857 0 0 1 250.34955,579.50808 197.85713,201.42857 0 0 1 449.28046,779.46902"
+       d="M 463.57216,791.43121 A 208.46835,212.23132 0 0 1 255.48276,1003.6622 208.46835,212.23132 0 0 1 46.63683,792.20281 208.46835,212.23132 0 0 1 253.96693,579.20305 208.46835,212.23132 0 0 1 463.56665,789.88803"
        sodipodi:open="true" />
     <path
-       style="fill:#ffffff"
+       style="display:inline;fill:#ffffff"
        id="path3336-3"
        sodipodi:type="arc"
-       sodipodi:cx="252.71391"
-       sodipodi:cy="793.44983"
-       sodipodi:rx="175.42892"
-       sodipodi:ry="175.42892"
+       sodipodi:cx="250.33789"
+       sodipodi:cy="804.6568"
+       sodipodi:rx="160.06467"
+       sodipodi:ry="191.41902"
        sodipodi:start="6.1088684"
        sodipodi:end="2.7266029"
-       d="M 425.48425,763.02424 A 175.42892,175.42892 0 0 1 303.6599,961.31827 175.42892,175.42892 0 0 1 92.175316,864.17936"
+       d="M 407.97682,771.45796 A 160.06467,191.41902 0 0 1 296.82197,987.82621 160.06467,191.41902 0 0 1 103.85944,881.83323"
        sodipodi:open="true" />
     <path
-       style="fill:#ff0000"
+       style="display:inline;fill:#ff0000"
        id="path3336-6"
        sodipodi:type="arc"
-       sodipodi:cx="251.42856"
-       sodipodi:cy="780.93365"
-       sodipodi:rx="215.71428"
-       sodipodi:ry="215.71428"
+       sodipodi:cx="258.6593"
+       sodipodi:cy="797.06653"
+       sodipodi:rx="222.58369"
+       sodipodi:ry="226.21407"
        sodipodi:start="2.6642473"
        sodipodi:end="6.1575654"
-       d="M 59.827327,880.03773 A 215.71428,215.71428 0 0 1 84.661462,644.10754 215.71428,215.71428 0 0 1 311.1952,573.66427 215.71428,215.71428 0 0 1 465.44305,753.90686"
+       d="M 60.956534,900.99445 A 222.58369,226.21407 0 0 1 86.581511,653.58047 222.58369,226.21407 0 0 1 320.32921,579.70841 222.58369,226.21407 0 0 1 479.48908,768.72422"
        sodipodi:open="true" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-145.13069"
-       y="789.52881"
-       id="text3353"
-       sodipodi:linespacing="125%"
-       transform="matrix(0.95279206,-0.30362359,0.30362359,0.95279206,0,0)"
-       inkscape:transform-center-x="2.8571428"
-       inkscape:transform-center-y="-22.857142"><tspan
-         sodipodi:role="line"
-         id="tspan3355"
-         x="-145.13069"
-         y="789.52881"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:112.5px;font-family:Waree;-inkscape-font-specification:Waree;fill:#ffffff">sag's</tspan></text>
     <path
-       style="fill:#ff0000"
-       d="m 91.42857,855.21932 98.57141,-30 c 2e-5,121.4287 0,0 2e-5,121.4287 -98.57143,-91.4287 -98.57143,-91.4287 -98.57143,-91.4287 z"
+       style="display:inline;fill:#ff0000"
+       d="M 98.659379,870.80415 202.51724,839.19523 c 1e-5,127.941 0,0 1e-5,127.941 C 98.659379,870.80415 98.659379,870.80415 98.659379,870.80415 Z"
        id="rect3357"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:#ff0000"
-       d="m 143.57143,835.93356 98.57141,-30 c 2e-5,121.4287 0,0 2e-5,121.4287 -98.57143,-91.4287 -98.57143,-91.4287 -98.57143,-91.4287 z"
+       style="display:inline;fill:#ff0000"
+       d="m 153.59869,850.48408 103.85786,-31.60892 c 2e-5,127.941 0,0 2e-5,127.941 C 153.59869,850.48408 153.59869,850.48408 153.59869,850.48408 Z"
        id="rect3357-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:61.42139053px;line-height:125%;font-family:sans-serif;letter-spacing:-3.21270704px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-136.50986"
+       y="765.62506"
+       id="text3455"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.9065255,-0.26635222,0.29835628,1.0154509,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3457"
+         x="-136.50986"
+         y="765.62506"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:138.19816589px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';letter-spacing:-3.21270704px;word-spacing:-4.54598093px;fill:#ffffff"
+         dx="-10.682249">sag's</tspan></text>
   </g>
 </svg>

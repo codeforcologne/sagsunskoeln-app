@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Geolocation} from 'ionic-native';
 
@@ -9,13 +8,14 @@ export class Submission {
   longitude: number;
   images: Array<{ title: string, base64Image: string }>;
   comment: string; 
+  service_code: string; 
   // status
   // submission Date
   // profil
 
   constructor() {
     // id (needed as reference in storage) is simply current time
-    this.id = "id#"+new Date().toISOString(); 
+    this.id = 'id#' + new Date().toISOString(); 
     this.images = Array(); 
   }
 
@@ -38,7 +38,7 @@ export class SubmissionBuilder {
 
   private acquireLocation() {
      Geolocation.getCurrentPosition().then((resp) => {
-                console.log("Coordinates are " + resp.coords.latitude + "," + resp.coords.longitude);
+                console.log('Coordinates are ' + resp.coords.latitude + ',' + resp.coords.longitude);
                 this.submission.latitude = resp.coords.latitude; 
                 this.submission.longitude = resp.coords.longitude; 
             });

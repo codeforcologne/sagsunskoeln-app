@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 
-import {CategoriesProvider} from './../../providers/categories-provider/categories-provider';
-import {IconsProvider} from './../../providers/icons-provider/icons-provider';
-import {CategoryDescriptionPage} from './modal/category-description'
+import { CategoriesProvider } from './../../providers/categories-provider/categories-provider';
+import { IconsProvider } from './../../providers/icons-provider/icons-provider';
+import { CategoryDescriptionPage } from './modal/category-description'
 
 @Component({
   templateUrl: 'build/pages/submission-categories/submission-categories.html',

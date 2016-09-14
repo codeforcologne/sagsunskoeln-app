@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import {CreateSubmission_Step1} from './../create-submission/screens/s1.take-picture.page';
+import {CreateSubmissionImages} from './../create-submission/screens/s1.take-picture.page';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class StartPage {
     }
 
     jumpToNew() {
-        this.navCtrl.push(CreateSubmission_Step1);
+        this.navCtrl.push(CreateSubmissionImages);
     }
 
     jumpToHelp() {

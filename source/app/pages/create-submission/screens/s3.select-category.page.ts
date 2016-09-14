@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-
-
-import {CreateSubmission_Step4} from './s4.add-comment.page'
-import {StartPage} from './../../start/start'
+import { NavController, NavParams } from 'ionic-angular';
+import {CreateSubmissionDescription} from './s4.add-comment.page';
 import {CategoriesProvider} from './../../../providers/categories-provider/categories-provider';
-import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder'
+import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder';
 
 
 
@@ -14,11 +10,10 @@ import {SubmissionBuilder} from './../../../providers/submission-builder/submiss
     templateUrl: 'build/pages/create-submission/screens/s3.select-category.html',
     providers: [CategoriesProvider]
 })
-export class CreateSubmission_Step3 {
+export class CreateSubmissionCategory {
     private categories: any;
     private builder: SubmissionBuilder;
-    private forwardDisabled: string = "true"; 
-    public categoryChoice: string = "";  
+    public categoryChoice: string = '';  
 
     constructor(private nav: NavController,
                 navParams: NavParams,
@@ -36,7 +31,7 @@ export class CreateSubmission_Step3 {
     } 
 
     step4() {
-        this.nav.push(CreateSubmission_Step4, {
+        this.nav.push(CreateSubmissionDescription, {
             builder: this.builder
         });
     }

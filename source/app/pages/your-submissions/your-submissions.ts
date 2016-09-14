@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Storage } from './../../providers/storage/storage'
+import { Storage } from './../../providers/storage/storage.sqlite'; 
 
 @Component({
   templateUrl: 'build/pages/your-submissions/your-submissions.html',

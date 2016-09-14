@@ -8,10 +8,10 @@ import {Submission} from './../submission-builder/submission-builder'
 @Injectable()
 export class Storage {
   // spaces
-  static tRefsYS: string = "your-submission-references";
+  static tRefsYS: string = 'your-submission-references';
 
 
-  constructor(private http: Http) { }
+  constructor() { }
 
 
   public storeSubmission(sub: Submission) {
@@ -79,8 +79,8 @@ export class Storage {
                 result.push(item);
               },
               error => {
-                console.log("Failed to retrieve Item: ", element);
-                console.log("Error Message: ", error);
+                console.log('Failed to retrieve Item: ', element);
+                console.log('Error Message: ', error);
               }
             );
           });
@@ -88,8 +88,8 @@ export class Storage {
           console.log(data);
         },
         error => {
-          console.log("Failed to retrieve my submissions");
-          console.log("Error Message: ", error);
+          console.log('Failed to retrieve my submissions');
+          console.log('Error Message: ', error);
         }
       );
 
@@ -101,7 +101,7 @@ export class Storage {
   public getFavorites() {
 
     // returns a list of all items
-    NativeStorage.getItem("favorites").then(
+    NativeStorage.getItem('favorites').then(
       // array of references
       data => console.log(data),
       error => console.error(error)
