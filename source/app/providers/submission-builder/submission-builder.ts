@@ -6,7 +6,7 @@ export class Submission {
   id: string; // profil#timestamp 
   latitude: number;
   longitude: number;
-  images: Array<{ title: string, base64Image: string }>;
+  images: Array<{ title: string, path: string }>;
   comment: string; 
   service_code: string; 
   // status
@@ -44,8 +44,12 @@ export class SubmissionBuilder {
             });
   }
 
-  public addImage(title: string, base64Image: string) {
-    this.submission.images.push({title, base64Image});
+  public addImage(title: string, path: string) {
+    this.submission.images.push({title, path});
+  }
+
+  public removeImage(path: string) {
+        this.submission.images.splice(this.submission.images.findIndex(img => img.path === path), 1); 
   }
 
   public getSubmission() {

@@ -64,9 +64,8 @@ export class Storage {
             this.db.executeSql(
               `create table if not exists images (
                 imageID INTEGER PRIMARY KEY, 
-                path text NOT NULL, 
-                service_request_id VARCHAR(32)
-               ) 
+                name text NOT NULL, 
+                path text NOT NULL               ) 
             `, {}).then(
                   () => {console.log('Successfully create table "Images"'); }, 
                   (err) => {console.error('Unable to execute sql: ', err); }
@@ -84,9 +83,14 @@ export class Storage {
     this.db.transaction((tx) => {
        console.log('in transaction');
 
-       let query = `INSERT INTO mySubmissions (service_request_id, status, service_code, description, lat, lon) VALUES(?,?,?,?,?,?)`;
+       let queryInsertSubmission = `INSERT INTO mySubmissions (service_request_id, status, service_code, description, lat, lon) VALUES(?,?,?,?,?,?)`;
+       let queryInsertImage = `INSERT INTO images (name, path) VALUES(?,?)`;
+
        let param = [sub.id, 'Unpublished', sub.service_code, sub.comment, sub.latitude, sub.longitude];  
-       tx.executeSql(query, param); 
+       tx.executeSql(queryInsertSubmission, param); 
+       sub.images.forEach((img) => {
+          tx.executeSql(queryInsertImage, [img.title, img.path]); 
+       }); 
 
       }).then(
         () =>  {console.log('Successfully stored submission'); }, 

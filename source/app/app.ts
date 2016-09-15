@@ -4,9 +4,9 @@ import { StatusBar } from 'ionic-native';
 
 import { StartPage } from './pages/start/start';
 import { SubmissionCategoriesPage } from './pages/submission-categories/submission-categories';
-import { AllSubmissionsPage } from "./pages/all-submissions/all-submissions";
-import { YourSubmissionsPage } from "./pages/your-submissions/your-submissions";
-import { CreateSubmissionImages } from "./pages/create-submission/screens/s1.take-picture.page";
+import { AllSubmissionsPage } from './pages/all-submissions/all-submissions';
+import { YourSubmissionsPage } from './pages/your-submissions/your-submissions';
+import { CreateSubmissionImages } from './pages/create-submission/screens/s1.take-picture.page';
 
 
 @Component({
@@ -26,7 +26,7 @@ class MyApp {
     this.pages = [
       { title: 'Start', component: StartPage },
       { title: 'Kategorien', component: SubmissionCategoriesPage },
-      { title: 'Neues Anliegen', component: CreateSubmissionImages },
+      { title: 'Neues Anliegen', component: CreateSubmissionImages   },
       { title: 'Deine Meldungen', component: YourSubmissionsPage },
       { title: 'Alle Meldungen', component: AllSubmissionsPage },
     ];

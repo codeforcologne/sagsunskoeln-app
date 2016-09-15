@@ -36,11 +36,11 @@
 <ion-content padding>
 
 	<ion-card *ngFor="let photo of getImages()">
-		<img [src]="photo.base64Image" *ngIf="photo.base64Image" />
+		<img [src]="getImage(photo.path)" />
 			
 		<ion-row no-padding>
 			<ion-col text-right>
-				<button clear small danger>
+				<button (click)='delete(photo.path)' clear small danger>
          		<ion-icon name='trash'></ion-icon>
 					Löschen
 				</button>
