@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Storage } from './../../providers/storage/storage.sqlite'; 
+import { Storage } from './../../providers/storage'; 
 
 @Component({
   templateUrl: 'build/pages/your-submissions/your-submissions.html',
   providers: [Storage]
 })
 export class YourSubmissionsPage {
+  view: string = 'self';
+
 
   constructor(private navCtrl: NavController,  private storage: Storage) {
-    this.loadSubmissions(); 
   }
 
-  private loadSubmissions() {
+ public getSubmissions() {
     this.storage.getMySubmissions().then(
       data => {
         console.log(data);
@@ -22,8 +23,8 @@ export class YourSubmissionsPage {
 
   }
 
-  private loadFavorites() {
-    this.storage.getFavorites(); 
+  public getFavorites() {
+    this.storage.getFavorites();  
   }
 
 }

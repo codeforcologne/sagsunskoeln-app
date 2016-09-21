@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { ModalController } from 'ionic-angular';
+import { NavController, ModalController  } from 'ionic-angular';
 
-import { CategoriesProvider } from './../../providers/categories-provider/categories-provider';
-import { IconsProvider } from './../../providers/icons-provider/icons-provider';
+import { CategoriesProvider } from './../../providers/georeport';
 import { CategoryDescriptionPage } from './modal/category-description'
 
 @Component({
   templateUrl: 'build/pages/submission-categories/submission-categories.html',
-  providers: [CategoriesProvider, IconsProvider]
+  providers: [CategoriesProvider]
 })
 export class SubmissionCategoriesPage {
   icons: string[];

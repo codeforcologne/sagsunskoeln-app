@@ -1,12 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ionicBootstrap, Platform, Nav } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
-
-import { StartPage } from './pages/start/start';
-import { SubmissionCategoriesPage } from './pages/submission-categories/submission-categories';
-import { AllSubmissionsPage } from './pages/all-submissions/all-submissions';
-import { YourSubmissionsPage } from './pages/your-submissions/your-submissions';
-import { CreateSubmissionImages } from './pages/create-submission/screens/s1.take-picture.page';
+import { StartPage, SubmissionCategoriesPage, AllSubmissionsPage, YourSubmissionsPage, CreateSubmissionImages } from './pages';
 
 
 @Component({

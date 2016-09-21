@@ -1,27 +1,8 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import {Geolocation} from 'ionic-native';
+import {Submission} from './submission'; 
 
-export class Submission {
-  id: string; // profil#timestamp 
-  latitude: number;
-  longitude: number;
-  images: Array<{ title: string, path: string }>;
-  comment: string; 
-  service_code: string; 
-  // status
-  // submission Date
-  // profil
-
-  constructor() {
-    // id (needed as reference in storage) is simply current time
-    this.id = 'id#' + new Date().toISOString(); 
-    this.images = Array(); 
-  }
-
-
-
-}
 
 
 

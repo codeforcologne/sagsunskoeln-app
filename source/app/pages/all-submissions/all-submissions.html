@@ -12,17 +12,21 @@
 </ion-header>
 
 
-<ion-content class="all-submissions">
+<ion-content padding class="all-submissions">
   <ion-list>
-    <button ion-item *ngFor="let submission of submissions" (click)="submissionTapped($event, submission)">
-      <ion-icon name="{{submission.icon}}" item-left></ion-icon>
-      {{submission.service_name}}
-      <div class="item-note" item-right>
-        {{submission.description}}
-      </div>
-    </button>
+    <ion-item *ngFor="let submission of submissions">
+      <ion-icon name="{{getIcon(submission)}}" item-left></ion-icon>
+      <header>  {{submission.service_name}}</header>
+      <time> Letzte Änderung: {{getLastUpdate(submission)}} </time>
+      <button secondary item-right clear (click)="submissionTapped(submission)">
+          <ion-icon name="eye"></ion-icon>
+          Details
+      </button>
+    </ion-item>
   </ion-list>
 </ion-content>
+
+
 
 <ion-footer>
    <ion-toolbar>

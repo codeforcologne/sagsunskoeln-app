@@ -1,7 +1,7 @@
 import {Page,  NavController, NavParams} from 'ionic-angular';
 
-import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder';
-import {Storage} from './../../../providers/storage/storage.sqlite';
+import {SubmissionBuilder} from './../../../providers/model';
+import {Storage} from './../../../providers/storage';
 
 @Page({
     templateUrl: 'build/pages/create-submission/screens/s4.add-comment.html', 

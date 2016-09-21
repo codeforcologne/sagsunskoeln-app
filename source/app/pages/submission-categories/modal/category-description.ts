@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ModalController, Platform, NavParams, ViewController} from 'ionic-angular';
+import {Platform, NavParams, ViewController} from 'ionic-angular';
 
 
 @Component({
@@ -13,6 +13,7 @@ export class CategoryDescriptionPage {
         public params: NavParams,
         public viewCtrl: ViewController
     ) {
+        console.log('Param: ', JSON.stringify(params));
          this.category = this.params.get('_category');
 
 

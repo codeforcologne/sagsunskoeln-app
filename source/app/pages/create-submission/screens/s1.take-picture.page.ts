@@ -1,7 +1,7 @@
 import { Page, NavController, NavParams } from 'ionic-angular';
 import { Camera, File } from 'ionic-native';
 import { CreateSubmissionCategory } from './s3.select-category.page';
-import { SubmissionBuilder } from './../../../providers/submission-builder/submission-builder';
+import { SubmissionBuilder } from './../../../providers/model';
 import 'rxjs/add/operator/map';
 
 @Page({

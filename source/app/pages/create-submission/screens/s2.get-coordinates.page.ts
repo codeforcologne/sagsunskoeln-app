@@ -1,33 +1,31 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
-import {CreateSubmission_Step3} from './s3.select-category.page'
-import {StartPage} from './../../start/start'
-import {Geolocation} from 'ionic-native';
-import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder'
+import {CreateSubmissionCategory} from './s3.select-category.page'
+import {SubmissionBuilder} from './../../../providers/model'
 
 @Page({
     templateUrl: 'build/pages/create-submission/screens/s2.get-coordinates.html'
 })
-export class CreateSubmission_Step2 {
+export class CreateSubmissionStep2 {
     builder: SubmissionBuilder;
     coord: string;
 
     constructor(private nav: NavController, navParams: NavParams) {
         console.log(navParams);
 
-        this.builder = navParams.get("builder");
+        this.builder = navParams.get('builder');
     }
 
 
     // Get location
     printLocation() {
-        return this.builder.getSubmission().latitude+ ", " + this.builder.getSubmission().longitude ; 
+        return this.builder.getSubmission().latitude+ ', ' + this.builder.getSubmission().longitude ; 
     }
 
 
     step3() {
-        console.log("Switching to next step 3.");
+        console.log('Switching to next step 3.');
 
-        this.nav.push(CreateSubmission_Step3);
+        this.nav.push(CreateSubmissionCategory);
     }
 
     cancel() {

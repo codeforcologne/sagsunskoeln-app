@@ -35,26 +35,26 @@ export class CategoriesProvider {
 
   getIcon(code: string) {
     switch (code) {
-      case "10":
-        return "bicycle";
-      case "11":
-        return "trash";
-      case "13":
-        return "bulb";
-      case "14":
-        return "print";
-      case "16":
-        return "headset";
-      case "17":
-        return "body";
-      case "19":
-        return "shirt";
-      case "20":
-        return "wine";
-      case "21":
-        return "football";
+      case '010':
+        return 'bicycle';
+      case '011':
+        return 'trash';
+      case '013':
+        return 'bulb';
+      case '014':
+        return 'print';
+      case '016':
+        return 'headset';
+      case '017':
+        return 'body';
+      case '019':
+        return 'shirt';
+      case '020':
+        return 'wine';
+      case '021':
+        return 'football';
       default:
-        return "shirt";
+        return 'shirt';
       }
   }
 

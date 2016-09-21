@@ -1,17 +1,36 @@
 <ion-header>
 
-  <ion-navbar>
-    <button menuToggle>
+    <ion-navbar>
+        <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Start</ion-title>
-  </ion-navbar>
+        <ion-title>Start</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="getting-started">
 
+
+    <ion-card padding>
+    <button large full outline (click)="jumpToNew()">
+              <ion-icon left  name="add"></ion-icon>
+              <label>Anliegen melden</label>
+    </button>
+    <button large full outline (click)="jumpToSubmissions()">
+              <ion-icon large  name="compass"></ion-icon>
+              <label>Eigene Anliegen</label>
+    </button>
+    <button large full outline (click)="jumpToHelp()">
+              <ion-icon left  name="help"></ion-icon>
+              <label>Mehr erfahren</label>
+    </button>
+    </ion-card>
+    <ion-card padding>
+        <h1> Neueste Änderungen: </h1>
+    </ion-card>
+    <!--
   <ion-grid>  
      <ion-row>
         <ion-col width-90>
@@ -51,7 +70,7 @@
          <ion-col width-10> 
         </ion-col>
       </ion-row>
-  </ion-grid>
+  </ion-grid>-->
 
 
 

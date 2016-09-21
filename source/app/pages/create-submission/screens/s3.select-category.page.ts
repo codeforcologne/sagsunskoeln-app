@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {CreateSubmissionDescription} from './s4.add-comment.page';
-import {CategoriesProvider} from './../../../providers/categories-provider/categories-provider';
-import {SubmissionBuilder} from './../../../providers/submission-builder/submission-builder';
+import {CategoriesProvider} from './../../../providers/georeport';
+import {SubmissionBuilder} from './../../../providers/model';
 
 
 
