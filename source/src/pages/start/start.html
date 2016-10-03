@@ -1,0 +1,77 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-buttonmenuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Start</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="getting-started">
+
+
+    <ion-card padding>
+        <button ion-button large full outline (click)="jumpToNew()">
+              <ion-icon left  name="add"></ion-icon>
+              <label>Anliegen melden</label>
+        </button>
+        <button ion-button large full outline (click)="jumpToSubmissions()">
+              <ion-icon large  name="compass"></ion-icon>
+              <label>Eigene Anliegen</label>
+        </button>
+        <button ion-button large full outline (click)="jumpToHelp()">
+              <ion-icon left  name="help"></ion-icon>
+              <label>Mehr erfahren</label>
+        </button>
+    </ion-card>
+    <ion-card padding>
+        <h1> Neueste Änderungen: </h1>
+    </ion-card>
+    <!--
+  <ion-grid>  
+     <ion-row>
+        <ion-col width-90>
+            <button large light block (click)="jumpToNew()" >
+              <ion-icon class="start-icon" name="add"></ion-icon>
+              <label class="start-title">Anliegen melden</label>
+            </button>
+        </ion-col>
+        <ion-col width-10> 
+            <button large block light outline>
+                <ion-icon class="help-icon" name="help"></ion-icon>
+            </button>
+        </ion-col>
+      </ion-row>
+
+       <ion-row>
+        <ion-col width-90>
+            <button large light block (click)="jumpToList()"  >
+            <ion-icon class="start-icon" name="compass"></ion-icon>
+              <label class="start-title">Deine Anliegen</label>
+            </button>
+        </ion-col>
+        <ion-col width-10> 
+            <button large block light outline>
+                <ion-icon class="help-icon" name="help"></ion-icon>
+            </button>
+        </ion-col>
+      </ion-row>
+    <ion-row>
+        <ion-col width-90>
+            <button large block (click)="jumpToHelp()" light>
+            <ion-icon class="start-icon" name="help"></ion-icon>
+                <label class="start-title">Mehr erfahren</label>
+            </button>
+        </ion-col>
+
+         <ion-col width-10> 
+        </ion-col>
+      </ion-row>
+  </ion-grid>-->
+
+
+
+</ion-content>

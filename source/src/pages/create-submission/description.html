@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+	        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Kommentar eingeben </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label stacked>Kommentar</ion-label>
+        <ion-textarea [(ngModel)]="comment"></ion-textarea>
+    </ion-item>
+
+</ion-content>
+
+<ion-footer>
+
+
+    <ion-row>
+        <ion-col width-67>
+            <button ion-button full secondary (click)="submit()">
+             <ion-icon name='checkmark-circled'></ion-icon>
+                <label>Einreichen</label>
+              </button>
+        </ion-col>
+        <ion-col width-33>
+            <button ion-button full danger (click)="cancel()">
+			    <ion-icon name='close'></ion-icon>
+                <label>Abbrechen</label>
+              </button>
+        </ion-col>
+    </ion-row>
+
+
+</ion-footer>

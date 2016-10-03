@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "/home/pajoma/workspace/sagsunskoeln-app/source/.tmp"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "include": [
+    "/home/pajoma/workspace/sagsunskoeln-app/source/src/app/main.dev.ts",
+    "/home/pajoma/workspace/sagsunskoeln-app/source/src/**/*.d.ts"
+  ]
+}

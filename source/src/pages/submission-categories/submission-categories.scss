@@ -1,0 +1,37 @@
+.card-category {
+
+    .card-image {
+         height: 100px;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+  ion-card {
+    position: relative;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 5%;
+    left: 5%; 
+    font-size: 2rem;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-icon {
+    position: absolute;
+    font-size: 4rem;
+    width: 100%;
+    color: #666;
+    top: 5%;
+    left: 90%;
+  }
+
+}
+
+.modal-description {
+    margin: 1em; 
+}

@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle>
+	    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Neueste Meldungen</ion-title>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding class="all-submissions">
+  <ion-list>
+    <ion-item *ngFor="let submission of submissions">
+      <ion-icon name="{{getIcon(submission)}}" item-left></ion-icon>
+      <header> {{submission.service_name}}</header>
+      <time> Letzte Änderung: {{getLastUpdate(submission)}} </time>
+      <button ion-button color="secondary" item-right clear (click)="submissionTapped(submission)">
+          <ion-icon name="eye"></ion-icon>
+          Details
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50>
+          <button full primary (click)="showSort()">
+			          <ion-icon name="arrow-dropdown"></ion-icon>
+                <label>Sortieren</label>
+              </button>
+        </ion-col>
+        <ion-col width-50>
+          <button full primary (click)="showFilter()">
+			          <ion-icon name="arrow-dropdown"></ion-icon>
+                <label>Filtern</label>
+              </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-toolbar>
+</ion-footer>

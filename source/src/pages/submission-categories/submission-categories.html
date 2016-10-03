@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+	    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Kategorien</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="card-category">
+
+  <ion-card *ngFor="let category of categories">
+    <img class="card-image" src="img/placeholder_600x400.svg" />
+    <label class="card-title">{{category.service_name}}</label>
+    <ion-icon class="card-icon" name="{{category.icon}}"></ion-icon>
+    <ion-row no-padding>
+      <ion-col text-right>
+        <button ion-button clear small (click)="loadDescription({_category: category})">
+         		<ion-icon name='arrow-dropup-circle'></ion-icon>
+                 
+
+
+					Beschreibung anzeigen
+				</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-content>

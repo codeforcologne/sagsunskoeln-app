@@ -1,0 +1,67 @@
+<ion-header>
+
+	<ion-navbar>
+		<button ion-button menuToggle icon-only>
+	  	  	<ion-icon name="menu"></ion-icon>
+    	</button>
+		<ion-title>Bild hinzufügen</ion-title>
+
+		<ion-buttons end>
+			<button ion-button color="light">
+	    		<ion-icon name="help"></ion-icon>
+    		</button>
+		</ion-buttons>
+
+
+	</ion-navbar>
+
+	<ion-toolbar no-shadow>
+		<ion-row>
+			<ion-col width-50>
+				<button ion-button full large primary (click)="pickImage()">
+			          <ion-icon name="albums"></ion-icon>
+                <label>Auswählen</label>
+              </button>
+			</ion-col>
+			<ion-col width-50>
+				<button ion-button full large primary (click)="takeImage()">
+			        <ion-icon name="camera"></ion-icon>
+                	<label>Foto</label>
+              </button>
+			</ion-col>
+		</ion-row>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card *ngFor="let photo of getImages()">
+		<img [src]="getImage(photo.path)" />
+
+		<ion-row no-padding>
+			<ion-col text-right>
+				<button ion-button (click)='delete(photo.path)' clear small danger>
+         		<ion-icon name='trash'></ion-icon>
+					Löschen
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col width-67>
+			<button ion-button full primary (click)="step2()">
+             	<ion-icon name='arrow-forward'></ion-icon>
+                <label>Weiter</label>
+              </button>
+		</ion-col>
+		<ion-col width-33>
+			<button ion-button full danger (click)="cancel()">
+			    <ion-icon name='close'></ion-icon>
+                <label>Abbrechen</label>
+              </button>
+		</ion-col>
+	</ion-row>
+</ion-footer>
