@@ -13,6 +13,7 @@ import * as providers from './../providers';
     pages.CreateSubmissionImages,
     pages.CreateSubmissionCategory,
     pages.CreateSubmissionDescription,
+    pages.CreateSubmissionStepLocation, 
     pages.SubmissionCategoriesPage,
     pages.SubmissionCategoriesDetails, 
     pages.SubmissionDetailsPage,
@@ -24,10 +25,15 @@ import * as providers from './../providers';
   bootstrap: [IonicApp],
   entryComponents: [
     SagsUnsApp,
-     pages.StartPage,
+   pages.StartPage,
     pages.AllSubmissionsPage,
+    pages.AllSubmissionsDetailsPage, 
     pages.CreateSubmissionImages,
+    pages.CreateSubmissionCategory,
+    pages.CreateSubmissionDescription,
     pages.SubmissionCategoriesPage,
+    pages.SubmissionCategoriesDetails, 
+    pages.SubmissionDetailsPage,
     pages.YourSubmissionsPage
   ],
   providers: [

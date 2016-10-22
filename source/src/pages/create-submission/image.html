@@ -1,13 +1,13 @@
 <ion-header>
 
 	<ion-navbar>
-		<button ion-button menuToggle icon-only>
+		<button ion-button menuToggle>
 	  	  	<ion-icon name="menu"></ion-icon>
     	</button>
 		<ion-title>Bild hinzufügen</ion-title>
 
 		<ion-buttons end>
-			<button ion-button color="light">
+			<button ion-button icon-only>
 	    		<ion-icon name="help"></ion-icon>
     		</button>
 		</ion-buttons>
@@ -18,13 +18,13 @@
 	<ion-toolbar no-shadow>
 		<ion-row>
 			<ion-col width-50>
-				<button ion-button full large primary (click)="pickImage()">
+				<button ion-button icon-left full large color="primary" (click)="pickImage()">
 			          <ion-icon name="albums"></ion-icon>
                 <label>Auswählen</label>
               </button>
 			</ion-col>
 			<ion-col width-50>
-				<button ion-button full large primary (click)="takeImage()">
+				<button ion-button icon-left full large color="primary" (click)="takeImage()">
 			        <ion-icon name="camera"></ion-icon>
                 	<label>Foto</label>
               </button>
@@ -52,13 +52,13 @@
 <ion-footer>
 	<ion-row>
 		<ion-col width-67>
-			<button ion-button full primary (click)="step2()">
+			<button ion-button icon-left full color="primary" (click)="step2()">
              	<ion-icon name='arrow-forward'></ion-icon>
                 <label>Weiter</label>
               </button>
 		</ion-col>
 		<ion-col width-33>
-			<button ion-button full danger (click)="cancel()">
+			<button ion-button icon-left full color="danger" (click)="cancel()">
 			    <ion-icon name='close'></ion-icon>
                 <label>Abbrechen</label>
               </button>

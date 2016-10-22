@@ -6,7 +6,7 @@ import { SubmissionBuilder } from './../../providers';
 @Component({
     templateUrl: 'location.html'
 })
-export class CreateSubmissionStep2 {
+export class CreateSubmissionStepLocation {
     builder: SubmissionBuilder;
     coord: string;
 

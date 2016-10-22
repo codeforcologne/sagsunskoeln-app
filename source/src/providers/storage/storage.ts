@@ -4,6 +4,11 @@ import { NativeStorage } from 'ionic-native';
 
 import {Submission} from './../model'
 
+/*
+  Simple NativeStorage is deprecated, see storage.sqlite instead
+*/
+
+
 @Injectable()
 export class Storage {
   // spaces
@@ -51,7 +56,7 @@ export class Storage {
 
 
   /** Returns a set of IDs of the user submissions */
-  private getReferences(): String[] {
+  public getReferences(): String[] {
 
     NativeStorage.getItem(Storage.tRefsYS).then(
       // array of references

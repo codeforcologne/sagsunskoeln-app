@@ -10,8 +10,8 @@ import { Submission } from './../model';
 export class Storage {
   // spaces
   static tRefsYS: string = 'your-submission-references';
-  private db: SQLite;
-  private open: boolean = false;
+  public db: SQLite;
+  public open: boolean = false;
 
   constructor(public platform: Platform) {
     this.initializeDatabase();
@@ -102,14 +102,6 @@ export class Storage {
 
 
 
-  /** Returns a set of IDs of the user submissions */
-  private getReferences(): String[] {
-    // do nothing yet
-    console.log('Storing submission');
-
-
-    return new String[10];
-  }
 
   public getSubmissions(): Promise<Submission[]> {
     return new Promise((resolve, reject) => {
@@ -122,7 +114,7 @@ export class Storage {
     });
   }
 
-  public getMySubmissions(): Promise<Submission[]> { // | Thenable<Submission[]> {
+    public getMySubmissions(): Promise<Submission[]> { // | Thenable<Submission[]> {
      return new Promise((resolve, reject) => {
       console.log('Getting my submission');
 

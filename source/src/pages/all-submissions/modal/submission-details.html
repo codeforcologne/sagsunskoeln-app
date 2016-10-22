@@ -5,11 +5,13 @@
       {{submission.category}}
     </ion-title>
     <ion-buttons end>
-      <button (click)="dismiss()">
+      <button icon-right (click)="setFavorit()">
         <span primary>Favorit</span>
+        <div *ngIf="Property"  
+        
         <ion-icon name="star" showWhen="android,windows"></ion-icon>
       </button>
-      <button (click)="dismiss()">
+      <button icon-right (click)="dismiss()">
         <span primary>Schließen</span>
         <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>

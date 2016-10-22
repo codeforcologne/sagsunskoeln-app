@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { CreateSubmissionImages } from './..';
+import { CreateSubmissionImages, YourSubmissionsPage } from './..';
 
 
 @Component({
@@ -13,16 +13,16 @@ export class StartPage {
 
   }
 
-    jumpToList() {
-    //    this.nav.push(YourSubmissionsPage);
-    }
+  jumpToSubmissions() {
+    this.navCtrl.push(YourSubmissionsPage);
+  }
 
-    jumpToNew() {
-        this.navCtrl.push(CreateSubmissionImages);
-    }
+  jumpToNew() {
+    this.navCtrl.push(CreateSubmissionImages);
+  }
 
-    jumpToHelp() {
+  jumpToHelp() {
 
-    }
-    
+  }
+
 }

@@ -17,7 +17,7 @@ export class CategoriesProvider {
 
     // don't have the data yet
     return new Promise(resolve => {
-      this.http.get('data/services.json')
+      this.http.get('assets/data/services.json')
         .map(res => res.json())
         .subscribe(data => {
           

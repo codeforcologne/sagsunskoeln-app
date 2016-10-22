@@ -8,6 +8,7 @@ import { Submission } from './../../../providers/model';
 export class AllSubmissionsDetailsPage {
     submission: Submission;
     view: string = 'info';
+    isFavorite: boolean = false; 
     isAndroid: boolean = false; 
 
     constructor(
@@ -20,6 +21,10 @@ export class AllSubmissionsDetailsPage {
     }
     dismiss() {
         this.viewCtrl.dismiss();
+    }
+
+    setFavorit() {
+        this.isFavorite = true; 
     }
 
     public getImages() {

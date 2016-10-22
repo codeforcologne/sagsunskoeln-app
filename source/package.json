@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "sags-uns-app",
+  "author": "pat@CodeForCologne",
+  "homepage": "http://codefor.de/koeln/",
   "private": true,
   "scripts": {
     "build": "ionic-app-scripts build",
@@ -22,7 +22,7 @@
     "@ionic/app-scripts": "latest",
     "typescript": "^2.0.3"
   },
-  "description": "SagsUnsApp: An Ionic project",
+  "description": "Die Sag's uns App für Köln.",
   "cordovaPlugins": [
     "cordova-plugin-device",
     "cordova-plugin-console",

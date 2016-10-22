@@ -24,13 +24,13 @@
 <ion-footer>
 	<ion-row>
 		<ion-col width-67>
-			<button ion-button [disabled]="categoryChoice.length == 0" full primary (click)="step4()"> 
+			<button ion-button icon-left color="primary" [disabled]="categoryChoice.length == 0" full primary (click)="step4()"> 
 				<ion-icon name='arrow-forward'></ion-icon>
                 <label>Weiter</label>
             </button>
 		</ion-col>
 		<ion-col width-33>
-			<button ion-button full danger (click)="cancel()">
+			<button ion-button icon-left full color="danger" (click)="cancel()">
 			    <ion-icon name='close'></ion-icon>
                 <label>Abbrechen</label>
               </button>
