@@ -1,0 +1,60 @@
+<ion-header>
+
+	<ion-navbar>
+		<button ion-button menuToggle>
+	  	  	<ion-icon name="menu"></ion-icon>
+    	</button>
+		<ion-title>Bild(er) hinzufügen</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-only>
+	    		<ion-icon name="help"></ion-icon>
+    		</button>
+		</ion-buttons>
+
+
+	</ion-navbar>
+
+	<ion-toolbar no-shadow>
+		<button ion-button icon-left block outline>
+			<ion-icon name="camera"></ion-icon>
+			<label>Ein Bild hinzufügen</label>
+			<input class="hideInput" type="file" accept="image/*" capture="camera" (change)='setFile($event)'/>
+			
+		</button>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card *ngFor="let photo of getImages()">
+		<img [src]="getImageData(photo.title)" />
+
+		<ion-row no-padding>
+			<ion-col text-left>
+				{{photo.title}}
+			</ion-col>
+
+			<ion-col text-right>
+				<button ion-button (click)='delete(photo.title)' clear small danger>
+         		<ion-icon name='trash'></ion-icon>
+					Löschen
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<button ion-button icon-left full color="primary" (click)="step2()">
+             	<ion-icon name='arrow-forward'></ion-icon>
+                <label>Weiter</label>
+		</button>
+	</ion-row>
+	<ion-row>
+		<button ion-button small icon-left full color="danger" (click)="cancel()">
+			    <ion-icon name='close'></ion-icon>
+                <label>Abbrechen</label>
+        </button>
+	</ion-row>
+</ion-footer>

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+	    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Deine Meldungen</ion-title>
+  </ion-navbar>
+
+  <!--  <ion-segment [(ngModel)]="view" [attr.light]="isAndroid ? '' : null"> -->
+  <ion-segment [(ngModel)]="view" light>
+    <ion-segment-button value="self">
+      Eigene
+    </ion-segment-button>
+    <ion-segment-button value="favs">
+      Favoriten
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-header>
+
+<ion-content padding class="card-category">
+
+  <div [ngSwitch]="view">
+    <div *ngSwitchCase="'self'">
+      <ion-list>
+        <ion-item *ngFor="let submission of getSubmissions()">
+          <ion-icon name="{{getIcon(submission)}}" item-left></ion-icon>
+          <header> {{submission.service_name}}</header>
+          <time> Letzte Änderung: {{getLastUpdate(submission)}} </time>
+          <button ion-button secondary item-right clear (click)="submissionTapped(submission)">
+              <ion-icon name="eye"></ion-icon>
+              Details
+          </button>
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+    <div *ngSwitchCase="'favs'">
+      <ion-list>
+        <ion-item *ngFor="let fav of getFavorites()">
+          <ion-icon name="{{getIcon(fav)}}" item-left></ion-icon>
+          <header> {{fav.service_name}}</header>
+          <time> Letzte Änderung: {{getLastUpdate(fav)}} </time>
+          <button ion-button secondary item-right clear (click)="submissionTapped(fav)">
+              <ion-icon name="eye"></ion-icon>
+              Details
+          </button>
+        </ion-item>
+      </ion-list>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-50>
+          <button ion-button icon-left full color="secondary" (click)="showSort()">
+			          <ion-icon name="arrow-dropdown"></ion-icon>
+                <label>Sortieren</label>
+          </button>
+        </ion-col>
+        <ion-col width-50>
+          <button ion-button icon-left full color="secondary" (click)="showFilter()">
+			          <ion-icon name="arrow-dropdown"></ion-icon>
+                <label>Filtern</label>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-toolbar>
+</ion-footer>

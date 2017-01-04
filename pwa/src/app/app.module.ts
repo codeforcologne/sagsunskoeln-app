@@ -1,23 +1,22 @@
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { SagsUnsApp } from './app.component';
-import * as pages from './../pages';
+import * as pages from '../pages/';
 import * as providers from './../providers';
 
 @NgModule({
   declarations: [
     SagsUnsApp,
-    pages.StartPage,
-    pages.AllSubmissionsPage,
-    pages.AllSubmissionsDetailsPage, 
+    pages.DashboardPage,
+    pages.ListAllSubmissionsPage,
+    pages.ListCategoriesPage,
+    pages.SubmissionCategoriesDetails,
+    pages.ListMySubmissionsPage,
     pages.CreateSubmissionImages,
     pages.CreateSubmissionCategory,
     pages.CreateSubmissionDescription,
-    pages.CreateSubmissionStepLocation, 
-    pages.SubmissionCategoriesPage,
-    pages.SubmissionCategoriesDetails, 
-    pages.SubmissionDetailsPage,
-    pages.YourSubmissionsPage
+    pages.CreateSubmissionLocation,
+    pages.ShowSubmissionPage
   ],
   imports: [
     IonicModule.forRoot(SagsUnsApp)
@@ -25,24 +24,26 @@ import * as providers from './../providers';
   bootstrap: [IonicApp],
   entryComponents: [
     SagsUnsApp,
-    pages.StartPage,
-    pages.AllSubmissionsPage,
-    pages.AllSubmissionsDetailsPage, 
+    pages.DashboardPage,
+    pages.ListAllSubmissionsPage,
+    pages.ListCategoriesPage,
+    pages.SubmissionCategoriesDetails,
+    pages.ListMySubmissionsPage,
     pages.CreateSubmissionImages,
     pages.CreateSubmissionCategory,
     pages.CreateSubmissionDescription,
-    pages.SubmissionCategoriesPage,
-    pages.SubmissionCategoriesDetails, 
-    pages.SubmissionDetailsPage,
-    pages.YourSubmissionsPage
+    pages.CreateSubmissionLocation,
+    pages.ShowSubmissionPage
   ],
   providers: [
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     providers.AllSubmissionsProvider,
     providers.CategoriesProvider,
     providers.GeoreportSubmission,
     providers.Storage,
     providers.Submission,
     providers.SubmissionBuilder
+
   ]
 })
 export class AppModule { }

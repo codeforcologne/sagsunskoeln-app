@@ -1,0 +1,38 @@
+<ion-header>
+
+	<ion-navbar>
+		<button ion-button menuToggle>
+	    	<ion-icon name="menu"></ion-icon>
+    	</button>
+		<ion-title>Kategorie auswählen</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding>
+	<!--(ionChange)="checkValue($event)-->
+	<ion-list radio-group [(ngModel)]="categoryChoice">
+		<!--<ion-list-header>
+			Kategorien
+		</ion-list-header>-->
+		<ion-item *ngFor="let category of categories">
+			<ion-icon class="card-icon" name="{{category.icon}}"></ion-icon>
+			<ion-label>{{category.service_name}}</ion-label>
+			<ion-radio value="{{category.service_name}}"></ion-radio>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+
+<ion-footer>
+	<ion-row>
+		<button ion-button icon-left color="primary" [disabled]="categoryChoice.length == 0" full primary (click)="step4()"> 
+             	<ion-icon name='arrow-forward'></ion-icon>
+                <label>Weiter</label>
+		</button>
+	</ion-row>
+	<ion-row>
+		<button ion-button small icon-left full color="danger" (click)="cancel()">
+			    <ion-icon name='close'></ion-icon>
+                <label>Abbrechen</label>
+        </button>
+	</ion-row>
+</ion-footer>

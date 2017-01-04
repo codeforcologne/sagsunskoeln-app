@@ -1,0 +1,13 @@
+{
+  "name": "Sag's uns App",
+  "short_name": "Sag's Uns",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "red",
+  "theme_color": "#4e8ef7"
+}

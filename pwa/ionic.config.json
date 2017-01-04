@@ -1,0 +1,17 @@
+{
+  "name": "SagsUnsApp",
+  "app_id": "ba5cf81a",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/requests",
+      "proxyUrl": "https://sags-uns.stadt-koeln.de/georeport/v2/requests.json"
+    },
+    {
+      "path": "/request",
+      "proxyUrl": "https://sags-uns.stadt-koeln.de/georeport/v2/request/"
+    }
+  ],
+  "defaultBrowser": "chrome"
+}

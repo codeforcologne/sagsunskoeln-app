@@ -1,0 +1,83 @@
+[
+    {
+        "service_code": "019",
+        "service_name": "Altkleidercontainer",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Finden Sie auf \u00f6ffentlichem Stra\u00dfenland Altkleider-Container, die nicht von den Abfallwirtschaftsbetrieben K\u00f6ln aufgestellt wurden und nicht gekennzeichnet sind, melden Sie bitte diese illegale Altkleidersammlung. Um sich gegen illegale, gewerbliche Sammlungen zu wehren und die gemeinn\u00fctzigen Sammlungen zu sch\u00fctzen werden diese illegalen Container aus dem Stadtgebiet entfernt.</p>\r\n\r\n<p>Aufgrund von gesetzlichen Vorgaben des Verwaltungsverfahrensgesetzes bringen wir am Container einen Hinweis an. Wir geben somit der Eigent\u00fcmerin und dem Eigent\u00fcmer die M\u00f6glichkeit den Container selbst zu entfernen. Erst nach Ablauf einer Frist von mindestens&nbsp;<strong>zwei Wochen</strong> beziehungsweise Kl\u00e4rung der Eigent\u00fcmerverh\u00e4ltnisse d\u00fcrfen wir t\u00e4tig werden. Wir bitten daher um Verst\u00e4ndnis, dass&nbsp;die illegal aufgestellten Altkleidercontainer nicht sofort entfernt werden k\u00f6nnen.</p>\r\n",
+        "keywords": "", 
+        "icon": "shirt"
+    },
+    {
+        "service_code": "017",
+        "service_name": "Ampel defekt",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Eine einzelne Lampe ist defekt oder die Ampel \"springt\" dauerhaft nicht um. Die Ampeltaste f\u00fcr Fu\u00dfg\u00e4ngerinnen und Fu\u00dfg\u00e4nger funktioniert nicht und ist vermutlich defekt.</p>\r\n\r\n<p>Die Instandsetzung wird direkt fest beauftragt und in der Regel innerhalb von <strong>zwei&nbsp;Tagen</strong> durch einen Dienstleister durchgef\u00fchrt.</p>\r\n",
+        "keywords": "", 
+        "icon": "body"
+    },
+    {
+        "service_code": "020",
+        "service_name": "Glascontainer",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Hin und wieder kann es vorkommen, dass ein Glascontainer \u00fcberf\u00fcllt ist. Trotz regelm\u00e4\u00dfiger Leerung k\u00f6nnen die Wertstoffcontainer die dort abgelieferten Mengen nicht aufnehmen. Auch werden Glasabf\u00e4lle nicht in die Container entsorgt, sondern unerlaubter Weise neben die Container gestellt.</p>\r\n\r\n<p>Stellen Sie solche M\u00e4ngel fest, dann melden Sie bitte die Standorte der Container unter Angabe der Stra\u00dfe mit einer Hausnummer, an denen Sie die \u00dcberf\u00fcllung der Container feststellen.</p>\r\n\r\n<p>Wir werden umgehend die Leerung oder die Beseitigung der beauftragen.</p>\r\n",
+        "keywords": "", 
+        "icon": "wine"
+    },
+    {
+        "service_code": "014",
+        "service_name": "Parkscheinautomat defekt",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Sie k\u00f6nnen am Parkscheinautomat kein Parkticket ziehen? Nach dem M\u00fcnzeinwurf gibt es keinen Parkschein oder keine M\u00fcnzr\u00fcckgabe, die EC-Karte / Geldkarte steckt im Automaten fest oder die eingeworfenen M\u00fcnzen fallen durch? Bitte melden Sie uns defekte oder nicht richtig funktionierende Parkscheinautomaten.</p>\r\n\r\n<p>Neben der Angabe der Stra\u00dfe mit einer Hausnummer, vor welcher der Automat steht, ist die Angabe der Parkscheinautomaten-Nummer sehr hilfreich.</p>\r\n\r\n<p>Die Instandsetzung wird kurzfristig direkt von unserem&nbsp;Parkbetriebsservice durchgef\u00fchrt.</p>\r\n\r\n<p><strong><em>Was sollten Sie tun, wenn ein Parkscheinautomat defekt ist? </em></strong><br />\r\n<em>Stellen Sie bitte Ihre Ankunftszeit auf einer Parkscheibe ein und legen Sie diese gut sichtbar hinter die Windschutzscheibe. Sie k\u00f6nnen dann bis zu der auf dem Parkscheinautomaten angegebenen H\u00f6chstparkdauer auch ohne Ticket parken. Sie m\u00fcssen Ihr Fahrzeug nicht umparken oder an einem anderen Automaten einen weiteren Parkschein l\u00f6sen.</em></p>\r\n",
+        "keywords": "", 
+        "icon": "print"
+    },
+    {
+        "service_code": "010",
+        "service_name": "Schrottfahrzeuge/Fahrr\u00e4der",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Wenn Ihnen auf \u00f6ffentlichen Fl\u00e4chen abgestellte Fahrr\u00e4der auffallen, die aufgrund ihres Zustandes als Abfall zu bewerten sind, weil beispielsweise wesentliche Teile, wie Rahmen oder R\u00e4der fehlen, melden Sie diese bitte. Dies gilt auch f\u00fcr abgemeldete (Schrott-)Fahrzeuge mit entsiegelten oder ganz ohne Nummernschilder, die auf \u00f6ffentlichen Fl\u00e4chen abgestellt sind.</p>\r\n\r\n<p>Wir nehmen Ihr Anliegen direkt in die Bearbeitung der Bezirksordnungsdienste auf. Von dort wird gepr\u00fcft, ob das Fahrrad oder das Fahrzeug sofort entsorgt werden kann, oder der Eigent\u00fcmerin oder dem Eigent\u00fcmer innerhalb einer gesetzlich vorgegebenen Frist die M\u00f6glichkeit gegeben werden muss, das Fahrrad oder das Fahrzeug selbst zu entfernen. Erst nach Ablauf der Frist&nbsp;d\u00fcrfen wir&nbsp;t\u00e4tig werden.</p>\r\n\r\n<p>Wir bitten um Verst\u00e4ndnis, dass die abschlie\u00dfende Bearbeitung aus diesem Grund nicht sofort erfolgen kann. Ihr Anliegen ist aber fest beauftragt und wird vom Bezirksordnungsdienst weiter bearbeitet.</p>\r\n",
+        "keywords": "abandonedcar, cars, wreckedcar, car",
+        "icon": "bicycle"
+    },
+    {
+        "service_code": "021",
+        "service_name": "Spiel- und Bolzpl\u00e4tze",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Alle \u00f6ffentlichen K\u00f6lner Spiel- und Bolzpl\u00e4tze werden regelm\u00e4\u00dfig gereinigt und kontrolliert \u2013 zur Sicherheit von Kindern, Jugendlichen und Eltern. Leider kommt es trotzdem immer wieder vor, dass M\u00fcll und Verunreinigungen auf den \u00f6ffentlichen K\u00f6lner Spiel- und Bolzpl\u00e4tzen hinterlassen werden. Auch k\u00f6nnen Spielger\u00e4te im Laufe der Zeit nicht mehr funktionst\u00fcchtig sein.</p>\r\n\r\n<p>Sofern Ihnen solche Zust\u00e4nde oder Abnutzungen auffallen, melden Sie diese bitte mit der Angabe des Spiel-/Bolzplatznamens und falls vorhanden der Spielplatznummer, damit wir Ihre Mitteilung genau zuordnen k\u00f6nnen.</p>\r\n\r\n<p>Grunds\u00e4tzlich sollten aber die Hinweise auf den Beschilderungen der Spielpl\u00e4tze befolgt werden. Ihr Anliegen wird kurzfristig durch die Stadt K\u00f6ln durchgef\u00fchrt.</p>\r\n",
+        "keywords": "",
+        "icon": "football"
+    },
+    {
+        "service_code": "016",
+        "service_name": "Stra\u00dfenbaustellen",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Hier k\u00f6nnen Sie alle \"Probleme\" mit Stra\u00dfenbaustellen melden; von der offensichtlich zu langen Dauer der Baustelle bis hin zu Ihrer Meinung nach zu gef\u00e4hrlicher Verkehrsf\u00fchrung. Wir interessieren uns aber auch f\u00fcr sogenannte \"Schlafbaustellen\" im Stra\u00dfenbau, an denen offensichtlich nicht mehr gearbeitet wird. M\u00f6glicherweise sind auch Baustellen- oder Verkehrsschilder nach Beendigung der Stra\u00dfenbaustelle nicht entfernt worden.</p>\r\n\r\n<p>Wichtig ist nur, dass es sich um<strong> Stra\u00dfenbauma\u00dfnahmen </strong>und nicht um Hochbauma\u00dfnahmen handelt.</p>\r\n\r\n<p>Nicht immer k\u00f6nnen wir die durch die Stra\u00dfenbaustelle entstehenden Unannehmlichkeiten beseitigen, aber wir nehmen uns der Sache an und werden wenn m\u00f6glich Abhilfe schaffen.</p>\r\n",
+        "keywords": "",
+        "icon": "headset"
+    },
+    {
+        "service_code": "013",
+        "service_name": "Stra\u00dfenlaterne defekt",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Ist eine Leuchte an einer Stra\u00dfe, einem Geh- oder Radweg defekt? Ist der Leuchtenmast oder das Leuchtenglas besch\u00e4digt?</p>\r\n\r\n<p>Neben der Angabe der Stra\u00dfe mit einer Hausnummer, vor welcher die Stra\u00dfenlaterne steht, ist die Angabe der <strong>Laternen-Nummer </strong>(kleines Schild auf dem Mast) sehr hilfreich.</p>\r\n\r\n<p>Die Instandsetzung wird direkt vom Amt f\u00fcr Stra\u00dfen- und Verkehrstechnik fest beauftragt und in der Regel innerhalb von <strong>zwei Wochen </strong>durch die RheinEnergie K\u00f6ln durchgef\u00fchrt.</p>\r\n",
+        "keywords": "Laterne",
+        "icon": "bulb"
+    },
+    {
+        "service_code": "011",
+        "service_name": "Wilder M\u00fcll",
+        "metadata": "false",
+        "type": "realtime",
+        "description": "<p>Leider kommt es immer h\u00e4ufiger vor, dass Haus- und Sperrm\u00fcll und sogar gef\u00e4hrliche Abf\u00e4lle (Schadstoffe) im Freiland, an Sammelcontainern f\u00fcr Glas oder Altkleider und auf \u00f6ffentlichen Stra\u00dfen und Pl\u00e4tzen achtlos abgelegt werden.</p>\r\n\r\n<p>Die Beseitigung von wildem M\u00fcll ist teuer. Au\u00dferdem stellen illegale M\u00fcllablagerungen eine Ordnungswidrigkeit dar und werden je nach Schwere mit hohen Strafen geahndet.</p>\r\n\r\n<p>Melden Sie bitte die Stellen unter Angabe der Stra\u00dfe mit einer Hausnummer, an denen wilder M\u00fcll liegt, damit der Abfall durch die Abfallwirtschaftsbetriebe K\u00f6ln GmbH entfernt werden kann.</p>\r\n",
+        "keywords": "litter, trash, garbage",
+        "icon": "trash"
+    }
+]
