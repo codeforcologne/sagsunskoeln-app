@@ -1,2 +1,3 @@
-# sagsunskoeln-app
-Georeporting/Open311 App for Cologne
+# Sag's uns
+Georeporting App for Cologne using the 311 API and MarkASpot
+

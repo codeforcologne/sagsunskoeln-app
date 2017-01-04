@@ -1,19 +1,24 @@
 # Changelog (and ToDos)
 
 
-## TODO
+## Current TODOs (0.2)
 - [ ] Create Dashboard page as overview page
 - [ ] Use the ServiceWorker EventQueue for the submission
-- [ ] Style the file upload button
-- [ ] 
+- [x] Style the file upload button
+- [ ] Cancel-Buttons (PopToRoot) doesn't work
+- [ ] Use Markaspot-Fonts (see #3) 
+- [ ] Connect to API 
 
+----
 
-## In a Galaxy far far away ...  Features
+##  Release 0.3 (Planned)
+- [ ] Style the app 
 
-## Release 0.3
-- [ ] Style 
-
-
-## Release 0.2
+----
+## Release 0.2 (Planned)
 - [ ] Transform the Ionic Android app into a PWA
 
+----
+
+## Release 0.1
+-  Proof of Concept as native app (with cordova plugins)
