@@ -19,5 +19,5 @@
 - [ ] Transform the Ionic Android app into a PWA
 
 
-## Release 0.1
+### Release 0.1
 - [x]  Proof of Concept as native app (with cordova plugins)
