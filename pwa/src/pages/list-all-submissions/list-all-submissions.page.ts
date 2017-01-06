@@ -20,24 +20,24 @@ export class ListAllSubmissionsPage {
 
 
 
-  loadSubmissions() {
+  public loadSubmissions() {
 
     this.provider.load().then(
-      data => {
-        this.submissions = data;
+      submissions => {
+        this.submissions = submissions;
       }
     );
   }
 
-  getIcon(submission: GeoreportSubmission): string {
+  public getIcon(submission: GeoreportSubmission): string {
     return this.categories.getIcon(submission.service_code);
   }
 
-  getLastUpdate(submission: GeoreportSubmission): string {
+  public getLastUpdate(submission: GeoreportSubmission): string {
     return new Date(submission.requested_datetime).toLocaleDateString();
   }
 
-  submissionTapped(sub: GeoreportSubmission): void {
+  public submissionTapped(sub: GeoreportSubmission): void {
 
     var submission = new Submission();
     submission.comment = sub.description;

@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
 import { Platform } from 'ionic-angular';
 import { SQLite } from 'ionic-native';
 import { Submission } from './../model';
-
+import { SubmissionStorage } from './storage';
+import * as Q from 'q';
 
 
 @Injectable()
-export class Storage {
+export class SQLStorage implements SubmissionStorage {
   // spaces
   static tRefsYS: string = 'your-submission-references';
   public db: SQLite;
@@ -75,7 +75,10 @@ export class Storage {
 
 
 
-  public storeSubmission(sub: Submission) {
+
+  public createSubmission(sub: Submission): Q.Promise<Submission> {
+     var deferred: Q.Deferred<Submission> = Q.defer<Submission>();
+
     // do nothing yet
     console.log('Storing submission');
 
@@ -93,50 +96,66 @@ export class Storage {
 
 
     }).then(
-      () => { console.log('Successfully stored submission'); },
-      (error) => { console.error('Unable to execute sql: ', error); }
+      () => { 
+        console.log('Successfully stored submission'); 
+        deferred.resolve(sub); 
+      },
+      (error) => { 
+        console.error('Unable to execute sql: ', error); 
+        deferred.reject(error); 
+      }
       );
 
     // TODO, store image as file
+    return deferred.promise; 
   }
 
-
-
-
-  public getSubmissions(): Promise<Submission[]> {
-    return new Promise((resolve, reject) => {
-      console.log('Getting submissions');
-
-      let q: string = 'SELECT * FROM submissions';
-      this.db.executeSql(q, {}).then(() => {
-
-      });
-    });
+  public readSubmission(sub: Submission): Q.Promise<Submission> {
+    throw new Error("Not implemented");
   }
 
-    public getMySubmissions(): Promise<Submission[]> { // | Thenable<Submission[]> {
-     return new Promise((resolve, reject) => {
-      console.log('Getting my submission');
-
-      
-    });
+  public updateSubmission(sub: Submission): Q.Promise<boolean> {
+    throw new Error("Not implemented");
   }
 
+  public deleteSubmission(sub: Submission): Q.Promise<boolean> {
+    throw new Error("Not implemented");
+  };
 
-  public getFavorites() {
-    return new Promise((resolve, reject) => {
-      console.log('Getting favorites');
+  public listRecentSubmissions(): Q.Promise<Submission[]> {
+    var deferred: Q.Deferred<Submission[]> = Q.defer<Submission[]>();
+    console.log('Getting my submission');
 
-      let q: string = 'SELECT * FROM favorites';
-      this.db.executeSql(q, {}).then(() => {
-
-      });
+    let q: string = 'SELECT * FROM cached';
+    this.db.executeSql(q, {}).then(() => {
+      deferred.resolve(null);
     });
 
+    return deferred.promise;
+  };
+
+  public listMySubmissions(): Q.Promise<Submission[]> {
+    var deferred: Q.Deferred<Submission[]> = Q.defer<Submission[]>();
+    console.log('Getting my submission');
+
+    let q: string = 'SELECT * FROM submissions';
+    this.db.executeSql(q, {}).then(() => {
+      deferred.resolve(null);
+    });
+
+    return deferred.promise;
+  };
 
 
-  }
+  public listFavorites(): Q.Promise<Submission[]> {
+    var deferred: Q.Deferred<Submission[]> = Q.defer<Submission[]>();
 
+    let q: string = 'SELECT * FROM favorites';
+    this.db.executeSql(q, {}).then(() => {
+      deferred.resolve(null);
+    });
 
+    return deferred.promise;
+  };
 }
 

@@ -40,7 +40,7 @@ import * as providers from './../providers';
     providers.AllSubmissionsProvider,
     providers.CategoriesProvider,
     providers.GeoreportSubmission,
-    providers.Storage,
+    providers.SQLStorage,
     providers.Submission,
     providers.SubmissionBuilder
 

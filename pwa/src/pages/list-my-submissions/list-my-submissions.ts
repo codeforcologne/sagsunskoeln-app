@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
-import { Storage, Submission } from './../../providers';
+import { SubmissionStorage, Submission } from './../../providers';
 
 
 @Component({
@@ -12,13 +12,13 @@ export class ListMySubmissionsPage {
   favorites: Submission[] = null;
   isAndroid: boolean = false;
 
-  constructor(private navCtrl: NavController, private storage: Storage, private platform: Platform) {
+  constructor(private navCtrl: NavController, private storage: SubmissionStorage, private platform: Platform) {
        this.isAndroid = platform.is('android');
   }
 
   public getSubmissions() {
     if (this.submissions !== null) {
-      this.storage.getMySubmissions().then(
+      this.storage.listMySubmissions().then(
         data => {
           console.log(data);
           this.submissions = new Array();
@@ -35,7 +35,7 @@ export class ListMySubmissionsPage {
 
   public getFavorites() {
     if (this.favorites !== null) {
-      this.storage.getFavorites().then(
+      this.storage.listFavorites().then(
         data => {
           console.log(data);
           this.favorites = new Array();

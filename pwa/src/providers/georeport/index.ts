@@ -1,2 +1,2 @@
-export * from './all-submissions-provider';
-export * from './categories-provider';
+export { AllSubmissionsProvider, GeoreportSubmission } from './all-submissions-provider';
+export { CategoriesProvider } from './categories-provider';
