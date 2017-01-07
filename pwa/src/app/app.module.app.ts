@@ -1,3 +1,5 @@
+import { SubmissionsCache } from './../providers/storage/storage.sw';
+import { SubmissionStorage } from './../providers/storage/storage';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { SagsUnsApp } from './app.component';
@@ -36,11 +38,18 @@ import * as providers from './../providers';
     pages.ShowSubmissionPage
   ],
   providers: [
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    { 
+      provide: ErrorHandler, 
+      useClass: IonicErrorHandler 
+    },
+    { 
+      provide: providers.SubmissionStorage, 
+      useClass: providers.SubmissionsCache
+    }, 
     providers.AllSubmissionsProvider,
     providers.CategoriesProvider,
     providers.GeoreportSubmission,
-    providers.SQLStorage,
+   
     providers.Submission,
     providers.SubmissionBuilder
 
