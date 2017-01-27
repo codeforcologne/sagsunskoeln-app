@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Platform, NavParams, ViewController} from 'ionic-angular';
 import { Submission } from './../../../providers/model';
+import * as providers from './../../../providers';
 
 @Component({
     templateUrl: 'submission-details.html'
@@ -8,23 +9,30 @@ import { Submission } from './../../../providers/model';
 export class AllSubmissionsDetailsPage {
     submission: Submission;
     view: string = 'info';
-    isFavorite: boolean = false; 
-    isAndroid: boolean = false; 
+    marked: boolean = false; 
 
     constructor(
         public platform: Platform,
         public params: NavParams,
-        public viewCtrl: ViewController
+        public viewCtrl: ViewController, 
+        public storage: providers.SubmissionStorage
     ) {
         this.submission = this.params.get('submission');
-        this.isAndroid = platform.is('android'); 
     }
     dismiss() {
         this.viewCtrl.dismiss();
     }
 
-    setFavorit() {
-        this.isFavorite = true; 
+    mark() {
+        // send request with current submission and user id to mark operation
+
+        this.storage.markSubmission(this.submission); 
+
+        this.marked = true; 
+    }
+
+    isMarked() {
+        return this.marked; 
     }
 
     public getImages() {

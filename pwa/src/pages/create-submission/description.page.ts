@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { SubmissionStorage, SubmissionBuilder } from './../../providers';
+import * as provider from './../../providers';
 
 @Component({
     templateUrl: 'description.html'
 })
 export class CreateSubmissionDescription {
     comment: string; 
-    builder: SubmissionBuilder;
+    builder: provider.SubmissionBuilder;
 
-    constructor(private nav: NavController, navParams: NavParams, public storage: SubmissionStorage) {
+    // TechDeb: Parameter should be SubmissionStorage (Interface), but can't compile
+    constructor(private nav: NavController, navParams: NavParams, public storage: provider.SubmissionsCache) {
         this.builder = navParams.get('builder');
     }
 

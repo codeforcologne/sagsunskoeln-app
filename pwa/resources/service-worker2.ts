@@ -15,8 +15,13 @@ export class AppServiceWorker {
 
   private registerActivateEvents(): void {
 
-    this.appWindow.addEventListener('activate', (event: ExtendableEvent) => {
+    // 
+    
 
+
+
+    this.appWindow.addEventListener('activate', (event: ExtendableEvent) => {
+      
       // in dev mode, we clean all caches
 
       var deferred: Q.Deferred<any> = Q.defer<any>();
@@ -105,5 +110,14 @@ self.addEventListener('fetch', (event: FetchEvent) => {
       });
     })
   );
+
+  this.appWindow.addEventListener('push', (event: PushEvent) => {
+      //   event.
+        // check https://gauntface.github.io/simple-push-demo/
+
+
+        // Serverseitig vielleicht ein einfaches PHP skript auf dem Server
+    }); 
+
 });
 

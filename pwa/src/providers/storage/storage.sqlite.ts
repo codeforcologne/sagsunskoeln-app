@@ -157,5 +157,9 @@ export class SQLStorage implements SubmissionStorage {
 
     return deferred.promise;
   };
+
+  public markSubmission(sub: Submission): Q.Promise<boolean> {
+    throw new Error("Not implemented");
+  }
 }
 

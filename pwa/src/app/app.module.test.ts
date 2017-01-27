@@ -18,7 +18,8 @@ import * as providers from './../providers';
     pages.CreateSubmissionCategory,
     pages.CreateSubmissionDescription,
     pages.CreateSubmissionLocation,
-    pages.ShowSubmissionPage
+    pages.ShowSubmissionPage,
+    pages.AllSubmissionsDetailsPage
   ],
   imports: [
     IonicModule.forRoot(SagsUnsApp)
@@ -35,7 +36,8 @@ import * as providers from './../providers';
     pages.CreateSubmissionCategory,
     pages.CreateSubmissionDescription,
     pages.CreateSubmissionLocation,
-    pages.ShowSubmissionPage
+    pages.ShowSubmissionPage,
+    pages.AllSubmissionsDetailsPage
   ],
   providers: [
     { 

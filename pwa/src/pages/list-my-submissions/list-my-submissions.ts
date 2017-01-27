@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
-import { SubmissionStorage, Submission } from './../../providers';
+import { SubmissionStorage, SubmissionsCache, Submission } from './../../providers';
 
 
 @Component({
@@ -12,7 +12,8 @@ export class ListMySubmissionsPage {
   favorites: Submission[] = null;
   isAndroid: boolean = false;
 
-  constructor(private navCtrl: NavController, private storage: SubmissionStorage, private platform: Platform) {
+  // TechDeb: Parameter should be SubmissionStorage (Interface), but can't compile
+  constructor(private navCtrl: NavController, private storage: SubmissionsCache, private platform: Platform) {
        this.isAndroid = platform.is('android');
   }
 

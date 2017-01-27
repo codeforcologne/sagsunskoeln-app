@@ -5,24 +5,21 @@
       {{submission.category}}
     </ion-title>
     <ion-buttons end>
-      <button icon-right (click)="setFavorit()">
-        <span primary>Favorit</span>
-        <!-- <div *ngIf="Property" -->  
-        
-        <ion-icon name="star" showWhen="android,windows"></ion-icon>
-      </button>
-      <button icon-right (click)="dismiss()">
-        <span primary>Schließen</span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      <button ion-button color="primary"  (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
 
 </ion-header>
-
+	
 
 
 <ion-content>
+  <button ion-button icon-left color="primary" [disabled]="isMarked()" full primary (click)="mark()"> 
+             	<ion-icon name='start'></ion-icon>
+                <label>Markieren</label>
+	</button>
   <div [ngSwitch]="view">
     <div *ngSwitchCase="'info'">
       <div class="modal-description" [innerHTML]="submission.comment"></div>

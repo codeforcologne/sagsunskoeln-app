@@ -119,6 +119,10 @@ export class SimpleStorage implements SubmissionStorage {
     throw new Error("Not implemented");
   }
 
+  public markSubmission(sub: Submission): Q.Promise<boolean> {
+    throw new Error("Not implemented");
+  }
+  
   public deleteSubmission(sub: Submission): Q.Promise<boolean> {
     throw new Error("Not implemented");
   };

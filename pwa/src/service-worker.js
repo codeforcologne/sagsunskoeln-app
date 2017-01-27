@@ -4,6 +4,25 @@ const CURRENT_CACHES = {
   'read-through': 'read-through-cache-v' + CACHE_VERSION
 };
 
+self.addEventListener('install', function(evt) {
+  console.log('The service worker is being installed.');
+  
+  /*
+  evt.waitUntil(caches.open(CURRENT_CACHES).then(function (cache) {
+  
+    
+    cache.addAll([
+      './controlled.html',
+      './asset'
+    ]);
+    
+  }));
+  */
+});
+
+
+
+
 self.addEventListener('activate', (event) => {
   // Delete all caches that aren't named in CURRENT_CACHES.
   // While there is only one cache in this example, the same logic will handle the case where
@@ -11,7 +30,6 @@ self.addEventListener('activate', (event) => {
   const expectedCacheNames = Object.keys(CURRENT_CACHES).map((key) => {
     return CURRENT_CACHES[key];
   });
-
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -36,11 +54,15 @@ self.addEventListener('activate', (event) => {
 // responses served from a specific domain, might be more appropriate for those use cases.
 self.addEventListener('fetch', (event) => {
 
+  console.log("Request logged "+event.request); 
+
   event.respondWith(
     caches.open(CURRENT_CACHES['read-through']).then((cache) => {
       return cache.match(event.request).then((response) => {
         if (response) {
           // If there is an entry in the cache for event.request, then response will be defined
+  
+  
           // and we can just return it.
 
           return response;

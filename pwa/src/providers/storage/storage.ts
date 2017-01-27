@@ -15,6 +15,7 @@ export declare class SubmissionStorage {
     readSubmission(sub: Submission): Q.Promise<Submission>;
     updateSubmission(sub: Submission): Q.Promise<boolean>; 
     deleteSubmission(sub: Submission): Q.Promise<boolean>;
+    markSubmission(sub: Submission): Q.Promise<boolean>;
     listMySubmissions(): Q.Promise<Submission[]>; 
     listFavorites(): Q.Promise<Submission[]>; 
 }
